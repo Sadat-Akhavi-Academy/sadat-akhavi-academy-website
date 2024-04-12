@@ -1,0 +1,1 @@
+sudo docker compose -f docker/prd/docker-compose.compute_stack.yml up --abort-on-container-exit

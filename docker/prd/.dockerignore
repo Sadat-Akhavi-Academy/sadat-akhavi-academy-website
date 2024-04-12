@@ -1,0 +1,11 @@
+*/.git
+*/.DS_Store
+*/node_modules
+*/node_modules/
+*/mongo-data/
+*/mongo-data
+
+*/ka_auth_service_submodule_js/modules/
+**/ka_auth_service_submodule_js/modules/*.py
+
+
