@@ -5,10 +5,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/saa_logo_09.png">
-        <link rel="stylesheet" href="css/site.css">
+        <!-- <link rel="stylesheet" href="css/site.css"> -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+            /*  ---------------------------------------------
+                Start - Style for clickable image with dots 
+                ---------------------------------------------*/
+            a.image-link {
+                display: block; /* Needed for pseudo-elements */
+                position: relative; /* Needed for pseudo-elements */
+            }
+
+            a.image-link img {
+                border: none; /* Remove image border */
+            }
+
+            /* Style for clickable dots at image corner */
+            a.image-link::after {
+                content: "..."; /* Display three dots */
+                color: white;
+                font-weight: bold;
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                font-size: 50px; /* Increase font size for larger dots */
+                letter-spacing: 5px;  /* Add space between dots */
+                opacity: 0.5; /* Semi-transparent */
+                transition: opacity 0.2s ease-in-out; /* Smoother opacity change */
+            }
+
+            a.image-link:hover::after {
+                opacity: 1; /* Dots become fully opaque on hover */
+            }
+            /*  ---------------------------------------------
+                End - Style for clickable image with dots 
+                ---------------------------------------------*/
+
+
             body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
             body, html {
             height: 100%;
@@ -117,19 +152,23 @@
 
     
     <div class="w3-row w3-container" style="margin:50px 0">
-    <div class="w3-half w3-container">
-    <div class="w3-topbar w3-border-amber">
-        <img src="images/alpha-dog.png" style="width:100%">
-        <h2>Alpha Dog</h2>
-        <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
-    </div>
-    </div>
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-amber">
+            <a href="pages/alpha-dog.html" class="image-link">
+              <img src="images/alpha-dog.png" style="width:100%">
+            </a>
+            <h2>Alpha Dog</h2>
+            <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
+        </div>
+      </div>
 
     <div class="w3-half w3-container">
     <div class="w3-topbar w3-border-amber">
-        <img src="images/turbo-tumb-IMG_7717.png" style="width:100%">
+        <a href="pages/turbo-tumb.html" class="image-link">
+            <img src="images/turbo-tumb-IMG_7717.png" style="width:100%">
+        </a>
         <h2>Turbo Thumb</h2>
-        <p>Make one and controll All ! Turbo thumb is awesome, it is one controller you bulid yourself and controls all your RC toys you gonna build. It is moduler and you can add new features to it.</p>
+        <p>Make one and controll All ! Turbo thumb is awesome, it is one controller you bulid yourself and controls all your RC toys you gonna build. It is modular and you can add new features to it.</p>
     </div>
     </div>
     </div>
@@ -137,7 +176,9 @@
     <div class="w3-row w3-container" style="margin:50px 0">
     <div class="w3-half w3-container">
     <div class="w3-topbar w3-border-orange">
-        <img src="images/clockometer_IMG_7795.png" style="width:100%">
+        <a href="pages/clockometer.html" class="image-link">
+            <img src="images/clockometer_IMG_7795.png" style="width:100%">
+        </a>
         <h2>Clockometer</h2>
         <p>Experience time like never before - the ultimate timepiece for young car lovers! Clockometer doesn't just tell time; it brings time to life in a whole new, exciting way.</p>
     </div>
@@ -171,7 +212,7 @@
     <!-- <p class="w3-center"><em>There is no Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br> -->
   
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center ">
+    <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
         <img src="images/flat-2126877_1280.png" style="width:100%" class="w3-hover-opacity" alt="Robotics">
         <p>Robotics</p>
