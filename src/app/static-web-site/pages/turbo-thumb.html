@@ -1,0 +1,267 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Turbo Thumb - Sadat Akhavi Academy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="../images/saa_logo_09.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body class="w3-light-grey">
+        <button onclick="go2HomePageFunction()" id="homePageBtn" title="Go to Home">Home Page</button>
+        <button onclick="topPageFunction()" id="pageTopBtn" title="Go to top">Top</button>
+        <button onclick="storeFunction()" id="pageTopStoreBtn" title="Go to e-Store">e-Store</button>
+
+        <!-- Page Container -->
+        <div class="w3-content w3-margin-top" style="max-width:2000px;">
+
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+        
+            <!-- Left Column -->
+            <div class="w3-third" id="home">
+            
+            <div class="w3-white w3-text-black w3-card-4">
+                <div class="w3-display-container">
+                <img src="../images/turbo-thumb-IMG_7717.png" style="width:100%" alt="Avatar2">
+                <div class="w3-display-bottomleft w3-container w3-text-white">
+                    <h2>Turbo Thumb</h2>
+                </div>
+                </div>
+                <div class="w3-container">
+                <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href= "https://www.youtube.com/@sadat-akhavi-academy">Introduction</a></p>
+                <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href= "https://www.youtube.com/@sadat-akhavi-academy">Assembly Guide</a></p>
+                <p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://gitlab.com/sadat-akhavi-academy/[product-name]/docs">Assembly Guide (pdf)</a></p>
+                <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href="#" onclick="showAdvancedContentPopup()">Advanced Training</a></p>
+                <p><i class="fa fa-git fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://gitlab.com/sadat-akhavi-academy">Software/Firmware</a></p>
+                <p><i class="fa fa-paper-plane-o fa-fw w3-margin-right w3-large w3-text-blank"></i><a href="https://discord.gg/zay8Ph6TPe">Socials</a></p>
+                <hr>
+                <p class="w3-large"><b><i class="fa fa-wpexplorer fa-fw w3-margin-right w3-text-black"></i>Developed Skills</b></p>
+                <div class="w3-row-padding w3-center">
+                
+                    <div class="w3-col m3">
+                    <img src="../images/transistor-31988_1280_2.png" style="height: 45px;width: 45px;" alt="Electronics">
+                    <p class="w3-tiny">Electronics</p>
+                    </div>
+                
+                    <div class="w3-col m3">
+                    <img src="../images/3d-printer-3308168_1280.png" style="height: 45px;width: 45px;" alt="3D Design & Printing">
+                    <p class="w3-tiny">3D Design</p>
+                    </div>
+                
+                    <div class="w3-col m3">
+                    <img src="../images/hexagon-2307350_1280.png" style="height: 45px;width: 45px;" alt="Coding">
+                    <p class="w3-tiny">Coding</p>
+                    </div>
+
+                    <div class="w3-col m3">
+                    <img src="../images/network-154851_1280.png" style="height: 45px;width: 45px;" alt="Networking">
+                    <p class="w3-tiny">Networking</p>
+                    </div>
+                    
+                </div>
+                <hr>
+                <p class="w3-large"><b><i class="fa fa-info-circle fa-fw w3-margin-right w3-text-black"></i>Information</b></p>
+                <p><i class="fa fa-users fa-fw w3-margin-right w3-medium w3-text-black"></i>Adult supervision advised</p>
+                <hr>
+                <p class="w3-large"><b><i class="fa fa-medkit fa-fw w3-margin-right w3-text-black"></i>Helpful Resources</b></p>
+                <p><i class="fa fa-shopping-bag fa-fw w3-margin-right w3-medium w3-text-green"></i><a href="" onclick="storeFunction()">e-Store</a></p>
+                <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-medium w3-text-red"></i><a href= "https://www.youtube.com/@sadat-akhavi-academy">3D Printer Guide</a></p>
+                <hr>
+                <p class="w3-large"><b><i class="fa fa-link fa-fw w3-margin-right w3-text-black"></i>Related Kits</b></p>
+                <p><i class="fa fa-caret-right fa-fw w3-margin-right w3-medium w3-text-black"></i><a href="alpha-dog.html">Alpha Dog</a></p>
+                </div>
+            </div><br>
+
+            <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+            
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-black w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Turbo Thumb</h2>
+                <div class="w3-container">
+                <p>
+                    Turbo Thumb is our shining beacon on the horizon! With just one controller, you have complete control over all your RC Army! It's a one-time investment that pays off every time.
+                </p><p>
+                    Turbo Thumb's Device-Selector feature gives you the power to choose the target device you want to control among your fleet. Additionally, it has a Broadcast-mode which allows you to send one command to all your devices at once and mobilize your entire fleet!
+                </p><p>
+                    With Turbo Thumb's powerful NRF24L01 RF module, your devices are never out of range. Operating at 2.4GHz with an external antenna, you can be assured of great reliability and throughput up to 1km.
+                </p><p>
+                    Turbo Thumb boasts a highly redundant power supply design, utilizing 2x redundant primary and secondary internal batteries for extended use, and 2x external ports for additional battery support on those days when you need extra power to extend the fun.
+                </p><p>
+                    Featuring a fully capable and highly powerful Atmega 2560 Microcontroller at its core, Turbo Thumb provides a high level of control and customization with its extensive IO ports, enabling you to add new features and customize it to suit your needs.
+                </p><p>
+                    Since Turbo Thumb's design is open-source and customizable, we will share new updates to the design and code, keeping your Turbo Thumb at the cutting edge of the latest technology and never out of fashion.
+                </p><p>
+                    In our more advanced content, we delve even deeper into the intricate details of circuitry, software development, and hardware design. As we make changes and updates, we'll guide you through the rationale behind certain design decisions, ensuring a deeper understanding and even more enjoyment throughout the learning process.
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+            <div class="w3-card w3-white w3-margin-bottom">
+                <!-- First Parallax Image with Logo Text -->
+                <div class="bgimg-2 w3-display-container w3-opacity-min">
+                    <div class="w3-display-middle" style="white-space:nowrap;">
+                    <button class="w3-button w3-padding-large w3-orange" style="margin-top:64px" onclick="storeFunction()">VISIT OUR e-STORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-black w3-padding-16"><i class="fa fa-video-camera fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Video</h2>
+                <div class="w3-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XSqv_nf_OtQ?si=7JQErxHTiXVi-2Q6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h5 class="w3-opacity"><b>Assembly tttt </b></h5>
+                <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Hardware Version: 6G</h6>
+                <p>Master Degree ttttt</p>
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
+                <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
+                <p>Web Development! All I need to know in one place</p>
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 class="w3-opacity"><b>School of Coding</b></h5>
+                <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
+                <p>Bachelor Degree</p><br>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-black w3-padding-16"><i class="fa fa-picture-o fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>GIF</h2>
+
+                <!-- Container (Portfolio Section) -->
+                <div class="w3-content w3-container w3-padding-64" id="portfolio">
+                <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+                <div class="w3-row-padding w3-center">
+                    <div class="w3-col m3">
+                    <img src="../images/alpha-dog/IMG_7719.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7719.JPG')" class="w3-hover-opacity" alt="Robotics">
+                    <p>Robotics</p>
+                    </div>
+                
+                    <div class="w3-col m3">
+                    <img src="../images/computer-8671934_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Electronics">
+                    <p>Electronics & Design</p>
+                    </div>
+                
+                    <div class="w3-col m3">
+                    <img src="../images/3d-printer-3308168_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D Design & Printing">
+                    <p>3D Design & Printing</p>
+                    </div>
+                
+                    <div class="w3-col m3">
+                    <img src="../images/hexagon-2307350_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coding">
+                    <p>Coding</p>
+                    </div>
+                </div>
+                <div class="w3-row-padding w3-center w3-section">
+                    <div class="w3-col m3">
+                    <img src="../images/alpha-dog/IMG_7727.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7727.JPG')" class="w3-hover-opacity" alt="Robotics">
+                    <p>Robotics</p>
+                    </div>
+
+                    <div class="w3-col m3">
+                    <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+                    </div>
+
+                    <div class="w3-col m3">
+                    <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+                    </div>
+
+                    <div class="w3-col m3">
+                    <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+                    </div>
+                    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+                </div>
+                </div>
+            </div>
+            
+
+            <div class="w3-card w3-white w3-margin-bottom">
+                <!-- First Parallax Image with Logo Text -->
+                <div class="bgimg-2 w3-display-container w3-opacity-min">
+                    <div class="w3-display-middle" style="white-space:nowrap;">
+                    <button class="w3-button w3-padding-large w3-orange" style="margin-top:64px" onclick="storeFunction()">VISIT OUR e-STORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16"><i class="fa fa-picture-o fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Gallery</h2>
+
+            <!-- Container (Portfolio Section) -->
+            <div class="w3-content w3-container w3-padding-64" id="portfolio">
+                <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+                <div class="w3-row-padding w3-center">
+                <div class="w3-col m3">
+                    <img src="../images/alpha-dog/IMG_7719.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7719.JPG')" class="w3-hover-opacity" alt="Robotics">
+                    <p>Robotics</p>
+                </div>
+            
+                <div class="w3-col m3">
+                    <img src="../images/computer-8671934_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Electronics">
+                    <p>Electronics & Design</p>
+                </div>
+            
+                <div class="w3-col m3">
+                    <img src="../images/3d-printer-3308168_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D Design & Printing">
+                    <p>3D Design & Printing</p>
+                </div>
+            
+                <div class="w3-col m3">
+                    <img src="../images/hexagon-2307350_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coding">
+                    <p>Coding</p>
+                </div>
+                </div>
+                <div class="w3-row-padding w3-center w3-section">
+                <div class="w3-col m3">
+                    <img src="../images/alpha-dog/IMG_7727.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7727.JPG')" class="w3-hover-opacity" alt="Robotics">
+                    <p>Robotics</p>
+                </div>
+
+                <div class="w3-col m3">
+                    <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+                </div>
+
+                <div class="w3-col m3">
+                    <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+                </div>
+
+                <div class="w3-col m3">
+                    <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+                </div>
+                <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+                </div>
+            </div>
+        <!-- End Right Column -->
+        </div>
+        <!-- End Grid -->
+        </div>
+        <!-- End Page Container -->
+        </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>&copy; <span id="copyrightYear"></span> Xigrom Pty Ltd. All rights reserved.</p>
+
+    </footer>
+    <script src="../script.js"></script>
+    </body>
+</html>

@@ -1,104 +1,285 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Sadat Akhavi Academy</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="images/saa_logo_09.png">
-        <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-            body, html {
-            height: 100%;
-            color: #777;
-            line-height: 1.8;
-            }
-            
-            /* Create a Parallax Effect */
-            .bgimg-1, .bgimg-2, .bgimg-3 {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            }
-            .bgimg-4 {
-            background-attachment: fixed;
-            background-position: bottom;
-            background-repeat: no-repeat;
-            background-size: cover;
-            }
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clockometer - Sadat Akhavi Academy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/saa_logo_09.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="w3-light-grey">
+    <button onclick="go2HomePageFunction()" id="homePageBtn" title="Go to Home">Home Page</button>
+    <button onclick="topPageFunction()" id="pageTopBtn" title="Go to top">Top</button>
+    <button onclick="storeFunction()" id="pageTopStoreBtn" title="Go to e-Store">e-Store</button>
 
-            .filter-grayscale {
-                filter: grayscale(100%);
-            }
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:2000px;">
 
-            .filter-blur {
-                filter: blur(4px);
-            }
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+      
+        <!-- Left Column -->
+        <div class="w3-third"  id="home">
+        
+          <div class="w3-white w3-text-black w3-card-4">
+            <div class="w3-display-container">
+              <img src="../images/clockometer_IMG_7795.png" style="width:100%" alt="Avatar2">
+              <div class="w3-display-bottomleft w3-container w3-text-white">
+                <h2>Clockometer</h2>
+              </div>
+            </div>
+            <div class="w3-container">
+              <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href= "https://www.youtube.com/@sadat-akhavi-academy">Introduction</a></p>
+              <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href= "https://www.youtube.com/@sadat-akhavi-academy">Assembly Guide</a></p>
+              <p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://gitlab.com/sadat-akhavi-academy/[product-name]/docs">Assembly Guide (pdf)</a></p>
+              <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-large w3-text-red"></i><a href="#" onclick="showAdvancedContentPopup()">Advanced Training</a></p>
+              <p><i class="fa fa-git fa-fw w3-margin-right w3-large w3-text-black"></i><a href="https://gitlab.com/sadat-akhavi-academy">Software/Firmware</a></p>
+              <p><i class="fa fa-paper-plane-o fa-fw w3-margin-right w3-large w3-text-blank"></i><a href="https://discord.gg/zay8Ph6TPe">Socials</a></p>
+              <hr>
+              
+              <p class="w3-large"><b><i class="fa fa-wpexplorer fa-fw w3-margin-right w3-text-black"></i>Developed Skills</b></p>
+              <div class="w3-row-padding w3-center">
+                <div class="w3-col m3">
+                  <img src="../images/flat-2126877_1280.png" style="height: 45px;width: 45px;" alt="Robotics">
+                  <p class="w3-tiny">Robotics</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/computer-8671934_1280.png" style="height: 45px;width: 45px;" alt="Electronics">
+                  <p class="w3-tiny">Electronics</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/3d-printer-3308168_1280.png" style="height: 45px;width: 45px;" alt="3D Design & Printing">
+                  <p class="w3-tiny">3D Design</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/hexagon-2307350_1280.png" style="height: 45px;width: 45px;" alt="Coding">
+                  <p class="w3-tiny">Coding</p>
+                </div>
+              </div>
+              <hr>
+              <p class="w3-large"><b><i class="fa fa-info-circle fa-fw w3-margin-right w3-text-black"></i>Information</b></p>
 
-            /* First image (Logo. Full height) */
-            .bgimg-1 {
-            background-image: url('images/saa_logo_11.png');
-            /* background-image: url('images/saa_logo_11_with_white_padding.png'); */
-            min-height: 100%;
-            }
-            
-            /* Second image (Portfolio) */
-            .bgimg-2 {
-            background-image: url("images/e-commerce-3692440_1280.jpg");
-            min-height: 400px;
-            }
-            
-            /* Third image (Contact) */
-            .bgimg-3 {
-            background-image: url("images/soldering-1038522_1280__2.jpg");
-            min-height: 400px;
-            }
-            
-            /* Four image (Portfolio) */
-            .bgimg-4 {
-            background-image: url("images/workshop-3d-printer.png");
-            min-height: 400px;
-            }
-            .w3-wide {letter-spacing: 10px;}
-            .w3-hover-opacity {cursor: pointer;}
-            
-            /* Turn off parallax scrolling for tablets and phones */
-            @media only screen and (max-device-width: 1600px) {
-            .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-                background-attachment: scroll;
-                min-height: 400px;
-            }
-            }
-        </style>
-    </head>
-    <body>
+              <p><i class="fa fa-users fa-fw w3-margin-right w3-medium w3-text-black"></i>Adult supervision advised</p>
+              <hr>
+              <p class="w3-large"><b><i class="fa fa-medkit fa-fw w3-margin-right w3-text-black"></i>Helpful Resources</b></p>
+              <p><i class="fa fa-shopping-bag fa-fw w3-margin-right w3-medium w3-text-green"></i><a href="" onclick="storeFunction()">e-Store</a></p>
 
-      <!-- Container (Contact Section) -->
-      <div class="w3-content w3-container w3-padding-64" id="contact">
-        <p class="w3-center"><em>We'd love your feedback!</em></p>
-        <div class="w3-center">
-              <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-center"></i> contactus [a-t sign] sadat-akhavi-academy.com<br>
+              <p><i class="fa fa-youtube-play fa-fw w3-margin-right w3-medium w3-text-red"></i><a href="https://www.youtube.com/@sadat-akhavi-academy">3D Printer Guide</a></p>
+
+            </div>
+          </div><br>
+
+        <!-- End Left Column -->
         </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+        
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Clockometer</h2>
+            <div class="w3-container">
+              <p>
+                Want to experience time instead of just measuring it? Love cars? Clockometer is for you. It's your ultimate timepiece.
+              </p><p>
+                Clockometer doesn't just measure time, it enables you to feel it. It helps you understand the value of time and be in control of it. Every second of your learning life becomes absolutely exciting!
+              </p><p>
+                Clockometer features a fully capable ESP32 SoC microcontroller at its heart. When you build your Clockometer, you'll utilize many features of the ESP32 as an advanced system-on-a-chip microcontroller. Clockometer is a fast teacher and regardless of age or skill level, it brings you up to speed. It teaches you 3D printing, electronics, WiFi networking, API development, firmware development, and how to use servo motors found in robotics projects.
+              </p><p>
+                Additionally, you will learn how to connect your microcontroller to the internet to get the accurate time from precise atomic clocks online, keeping your timekeeping device at the edge of time.
+              </p><p>
+                The design of Clockometer is modular and open-source, allowing you to copy, modify, and update it for your personal use. In our more advanced content, we delve even deeper into the intricate details of circuitry, software development, and hardware design. As we make changes and updates, we'll guide you through the rationale behind certain design decisions, ensuring a deeper understanding and even more enjoyment throughout the learning process.
+              </p>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        
+          <div class="w3-card w3-white w3-margin-bottom">
+              <!-- First Parallax Image with Logo Text -->
+              <div class="bgimg-2 w3-display-container w3-opacity-min">
+                  <div class="w3-display-middle" style="white-space:nowrap;">
+                  <button class="w3-button w3-padding-large w3-orange" style="margin-top:64px" onclick="storeFunction()">VISIT OUR e-STORE</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16"><i class="fa fa-medkit fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Work Experience</h2>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-black w3-round">Current</span></h6>
+              <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+              <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+            </div>
+          </div>
+
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16"><i class="fa fa-video-camera fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Video</h2>
+            <div class="w3-container">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XSqv_nf_OtQ?si=7JQErxHTiXVi-2Q6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <h5 class="w3-opacity"><b>Assembly tttt </b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Hardware Version: 6G</h6>
+              <p>Master Degree ttttt</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
+              <p>Web Development! All I need to know in one place</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>School of Coding</b></h5>
+              <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
+              <p>Bachelor Degree</p><br>
+            </div>
+          </div>
+
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 class="w3-text-black w3-padding-16"><i class="fa fa-picture-o fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>GIF</h2>
+
+            <!-- Container (Portfolio Section) -->
+            <div class="w3-content w3-container w3-padding-64" id="portfolio">
+              <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+              <div class="w3-row-padding w3-center">
+                <div class="w3-col m3">
+                  <img src="../images/alpha-dog/IMG_7719.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7719.JPG')" class="w3-hover-opacity" alt="Robotics">
+                  <p>Robotics</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/computer-8671934_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Electronics">
+                  <p>Electronics & Design</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/3d-printer-3308168_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D Design & Printing">
+                  <p>3D Design & Printing</p>
+                </div>
+            
+                <div class="w3-col m3">
+                  <img src="../images/hexagon-2307350_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coding">
+                  <p>Coding</p>
+                </div>
+              </div>
+              <div class="w3-row-padding w3-center w3-section">
+                <div class="w3-col m3">
+                  <img src="../images/alpha-dog/IMG_7727.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7727.JPG')" class="w3-hover-opacity" alt="Robotics">
+                  <p>Robotics</p>
+                </div>
+
+                <div class="w3-col m3">
+                  <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+                </div>
+
+                <div class="w3-col m3">
+                  <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+                </div>
+
+                <div class="w3-col m3">
+                  <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+                </div>
+                <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+              </div>
+            </div>
+        </div>
+        
+
+        <div class="w3-card w3-white w3-margin-bottom">
+          <!-- First Parallax Image with Logo Text -->
+          <div class="bgimg-2 w3-display-container w3-opacity-min">
+              <div class="w3-display-middle" style="white-space:nowrap;">
+              <button class="w3-button w3-padding-large w3-orange" style="margin-top:64px" onclick="storeFunction()">VISIT OUR e-STORE</button>
+              </div>
+          </div>
+        </div>
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-black w3-padding-16"><i class="fa fa-picture-o fa-fw w3-margin-right w3-xxlarge w3-text-black"></i>Gallery</h2>
+
+          <!-- Container (Portfolio Section) -->
+          <div class="w3-content w3-container w3-padding-64" id="portfolio">
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div class="w3-row-padding w3-center">
+              <div class="w3-col m3">
+                <img src="../images/alpha-dog/IMG_7719.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7719.JPG')" class="w3-hover-opacity" alt="Robotics">
+                <p>Robotics</p>
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="../images/computer-8671934_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Electronics">
+                <p>Electronics & Design</p>
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="../images/3d-printer-3308168_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D Design & Printing">
+                <p>3D Design & Printing</p>
+              </div>
+          
+              <div class="w3-col m3">
+                <img src="../images/hexagon-2307350_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coding">
+                <p>Coding</p>
+              </div>
+            </div>
+            <div class="w3-row-padding w3-center w3-section">
+              <div class="w3-col m3">
+                <img src="../images/alpha-dog/IMG_7727.JPG" style="width:100%" onclick="openImage('../images/alpha-dog/IMG_7727.JPG')" class="w3-hover-opacity" alt="Robotics">
+                <p>Robotics</p>
+              </div>
+
+              <div class="w3-col m3">
+                <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+              </div>
+
+              <div class="w3-col m3">
+                <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+              </div>
+
+              <div class="w3-col m3">
+                <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+              </div>
+              <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+            </div>
+          </div>
+      <!-- End Right Column -->
       </div>
+      <!-- End Grid -->
+      </div>
+      
+      <!-- End Page Container -->
+    </div>
 
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>&copy; <span id="copyrightYear"></span> Xigrom Pty Ltd. All rights reserved.</p>
 
-      <!-- Footer -->
-      <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-          <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-snapchat w3-hover-opacity"></i>
-          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-          <i class="fa fa-twitter w3-hover-opacity"></i>
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-        <p>&copy; <span id="copyrightYear"></span> Xigrom Pty Ltd. All rights reserved.</p>
-
-      </footer>
-
-    </body>
-    </html>
+  </footer>
+  <script src="../script.js"></script>
+  </body>
+</html>

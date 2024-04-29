@@ -1,0 +1,162 @@
+
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+/*  ---------------------------------------------
+Start - Style for clickable image with dots 
+---------------------------------------------*/
+a.image-link {
+    display: block; /* Needed for pseudo-elements */
+    position: relative; /* Needed for pseudo-elements */
+}
+
+a.image-link img {
+    border: none; /* Remove image border */
+}
+
+/* Style for clickable dots at image corner */
+a.image-link::after {
+    content: "..."; /* Display three dots */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 50px; /* Increase font size for larger dots */
+    letter-spacing: 5px;  /* Add space between dots */
+    opacity: 0.5; /* Semi-transparent */
+    transition: opacity 0.2s ease-in-out; /* Smoother opacity change */
+}
+
+a.image-link:hover::after {
+    opacity: 1; /* Dots become fully opaque on hover */
+}
+/*  ---------------------------------------------
+    End - Style for clickable image with dots 
+    ---------------------------------------------*/
+body, html {
+height: 100%;
+color: #777;
+line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.bgimg-4 {
+background-attachment: fixed;
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.filter-grayscale {
+    filter: grayscale(100%);
+}
+
+.filter-blur {
+    filter: blur(4px);
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+background-image: url('images/saa_logo_11.png');
+/* background-image: url('images/saa_logo_11_with_white_padding.png'); */
+min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+background-image: url("images/e-commerce-3692440_1280.jpg");
+min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+background-image: url("images/soldering-1038522_1280__2.jpg");
+min-height: 400px;
+}
+
+/* Four image (Portfolio) */
+.bgimg-4 {
+background-image: url("images/workshop-3d-printer.png");
+min-height: 400px;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: scroll;
+    min-height: 400px;
+}
+}
+
+
+#homePageBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#homePageBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#pageTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 330px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 30px 15px 30px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#pageTopBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+#pageTopStoreBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 180px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: green; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 30px 15px 30px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#pageTopStoreBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
