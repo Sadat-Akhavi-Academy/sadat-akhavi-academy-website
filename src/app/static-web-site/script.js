@@ -74,5 +74,6 @@
       window.open(imageSrc, '_blank');
     }
     function showAdvancedContentPopup() {
-        alert("Coming soon: Advanced level content, Stay tuned!");
+        alert("Advanced level content coming soon! Stay tuned by joining our social media and Discord server.");
+        // alert("Coming soon: Advanced level content, Stay tuned!");
     }
