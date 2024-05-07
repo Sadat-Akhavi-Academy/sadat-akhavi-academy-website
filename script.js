@@ -31,6 +31,9 @@
             x.className = x.className.replace(" w3-show", "");
         }
     }
+    function productAvailableSoonFunction() {
+        alert("This product will be available soon. Please join our Discord Server to stay tuned.");
+    }
 
     function storeFunction() {
         alert("We are renovating our online store. It will be available soon.");
@@ -74,6 +77,6 @@
       window.open(imageSrc, '_blank');
     }
     function showAdvancedContentPopup() {
-        alert("Advanced level content coming soon! Stay tuned by joining our social media and Discord server.");
+        alert("This section is under active development, and content is coming soon! Stay tuned by joining our social media and Discord server.");
         // alert("Coming soon: Advanced level content, Stay tuned!");
     }
