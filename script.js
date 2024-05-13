@@ -36,7 +36,8 @@
     }
 
     function storeFunction() {
-        alert("We are renovating our online store. It will be available soon.");
+        window.location.href = "https://www.ebay.com.au/usr/sadat_akhavi_academy";
+        // alert("We are renovating our online store. It will be available soon.");
     }
 
 
