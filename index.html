@@ -10,10 +10,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y85LB15940"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Y85LB15940');
+        </script>
     </head>
     <body>
 
-    <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar" id="myNavbar">
           <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -23,17 +31,12 @@
           <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
           <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
           <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-          <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-          </a> -->
         </div>
       
-        <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
           <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
           <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
           <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-          <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
         </div>
       </div>
         <div class="w3-display-container" style="margin-bottom:50px" id="home" >
@@ -44,13 +47,16 @@
         </div>
         </div>
 
-
         <div class="bgimg-4 w3-display-container w3-opacity-min filter-grayscale" id="portfolio">
             <div class="w3-display-middle">
               <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
             </div>
           </div>
 
+        <div class="w3-margin-bottom w3-margin-top">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y7-TDPSfmrQ?si=YcwVKwqs-4kAbhlR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+  
 
         
         <div class="w3-row w3-container" style="margin:50px 0">
@@ -68,7 +74,6 @@
           <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
                 <a href="pages/turbo-thumb.html"  class="image-link">
-                  <!-- <a  onclick="productAvailableSoonFunction()" class="image-link"> -->
                     <img src="images/turbo-thumb-IMG_7717.png" style="width:100%">
                 </a>
                 <h2>Turbo Thumb</h2>
@@ -83,7 +88,6 @@
           <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
                 <a href="pages/alpha_bike_j.html" class="image-link">
-                <!-- <a  onclick="productAvailableSoonFunction()" class="image-link"> -->
                   <img src="images/alpha_bike_j_mod4.jpg" style="width:100%">
                 </a>
                 <h2>Alpha Bike J </h2>
@@ -101,40 +105,13 @@
           <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
                 <a href="pages/alpha_bike_x.html" class="image-link">
-                <!-- <a  onclick="productAvailableSoonFunction()" class="image-link"> -->
                   <img src="images/alpha_bike_x.png" style="width:100%">
                 </a>
                 <h2>Alpha Bike X </h2>
                 <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
             </div>
           </div>
-
-
-
-<!-- 
-        <div class="w3-half w3-container">
-        <div class="w3-topbar w3-border-orange">
-            <div class="filter-blur">
-                <img src="images/3d-791205_640_pixabay.jpg" style="width:100%">
-            </div>
-            <h2>New Arrivals</h2>
-            <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
-            </div>
-        </div>
-        </div> -->
-
-
         <div class="w3-row w3-container" style="margin:50px 0">
-          <!-- <div class="w3-half w3-container">
-          <div class="w3-topbar w3-border-orange">
-              <a href="pages/clockometer.html" class="image-link">
-                  <img src="images/clockometer_IMG_7795.png" style="width:100%">
-              </a>
-              <h2>Clockometer</h2>
-              <p>Experience time like never before - the ultimate timepiece for young car lovers! Clockometer doesn't just tell time; it brings time to life in a whole new, exciting way.</p>
-          </div>
-          </div> -->
-  
           <div class="w3-half w3-container">
           <div class="w3-topbar w3-border-orange">
               <div class="filter-blur">
@@ -146,22 +123,18 @@
           </div>
           </div>
   
-    <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
       <div class="w3-display-middle" style="white-space:nowrap;">
         <button class="w3-button w3-padding-large w3-orange" style="margin-top:64px" onclick="storeFunction()">VISIT OUR e-STORE</button>
       </div>
     </div>
 
+    <div class="w3-margin-bottom w3-margin-top">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Y7-TDPSfmrQ?si=YcwVKwqs-4kAbhlR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
-
-
-    <!-- Container (Portfolio Section) -->
     <div class="w3-content w3-container w3-padding-64 w3-panel" style="margin-top:5rem;margin-bottom:5rem" id="portfolio" >
         <h3 class="w3-center" style="margin-bottom:5rem" >SKILLS WE HELP YOU MASTER</h3>
-        <!-- <p class="w3-center"><em>There is no Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br> -->
-      
-        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
         <div class="w3-row-padding w3-center">
           <div class="w3-col m3">
             <img src="images/flat-2126877_1280.png" style="width:100%" class="w3-hover-opacity" alt="Robotics">
@@ -183,32 +156,9 @@
             <p>Coding</p>
           </div>
         </div>
-    <!--   
-        <div class="w3-row-padding w3-center w3-section">
-          <div class="w3-col m3">
-            <img src="images/three-35534_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D Design">
-            <p>3D Design</p>
-          </div>
-      
-          <div class="w3-col m3">
-            <img src="images/soldering-1038522_1280__1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PCB build & soildering">
-            <p>PCB build & soldering</p>
-          </div>
-      
-          <div class="w3-col m3">
-            <img src="images/gear-295455_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Part design">
-            <p>Part design</p>
-          </div>
-      
-          <div class="w3-col m3">
-            <img src="images/joystick-23234_1280.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Learning through play">
-            <p>Learning through play!</p>
-          </div>
-          <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-        </div> -->
+
       </div>
       
-      <!-- Modal for full size images on click-->
       <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
         <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
         <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -217,15 +167,12 @@
         </div>
       </div>
 
-    <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-3 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-hide-small">LET'S BUILD SOMETHING AMAZING TOGETHER!</span>
-          <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">LET'S </span>BUILD SOMETHING AMAZING <span class="w3-hide-small">TOGETHER!</span></span> -->
+          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-hide-small">LET'S MAKE SOMETHING AMAZING TOGETHER!</span>
         </div>
       </div>
 
-    <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-padding-64" id="about">
         <h3 class="w3-center">ABOUT US</h3>
         <p class="w3-center"><em>Education is where our heart is.</em></p>
@@ -234,16 +181,12 @@
             <img src="images/saa_logo_12.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
           </div>
       
-          <!-- Hide this text on small devices -->
           <div class="w3-col m6 w3-padding-large">
-            <!-- <p>We are a Melbourne-based startup focusing on education through play. We help youngsters learn and master new skills in areas such as Robotics, Electronics, Programming, 3D Printing, and 3D Design. We believe that toys are not just toys; they are a means for youngsters to express themselves and change their world. That's why all our designs are practical; youngsters can see their hard work and creations come to life and be used in meaningful ways. They can understand how they can impact the world from a very young age. We help them build their self-confidence and add value to their lives. Our designs cater to all age ranges, from young kids who can assemble and learn from them to parents who assemble and learn alongside their children, spending quality time together.</p> -->
             <p>We are a startup dedicated to revolutionizing education through the power of play. Our mission is to make learning fun, engaging, and accessible to children everywhere. By combining innovative technology with interactive experiences, we aim to inspire curiosity, creativity, and critical thinking skills in young minds. We help youngsters learn and master new skills in areas such as Robotics, Electronics, Programming, 3D Printing, and 3D Design. We believe that toys are not just toys; they are a means for youngsters to express themselves and change their world. That's why all our designs are practical; youngsters can see their hard work and creations come to life and be used in meaningful ways. They can understand how they can impact the world from a very young age. We help them build their self-confidence and add value to their lives. Our designs cater to all age ranges, from young kids who can assemble and learn from them to parents who assemble and learn alongside their children, spending quality time together.</p>
         </div>
         </div>
       </div>
       
-
-    <!-- Container (Contact Section) -->
     <div class="w3-content w3-container w3-padding-64" id="contact">
         <p class="w3-center"><em>We'd love your feedback!</em></p>
         <div class="w3-center">
@@ -251,19 +194,13 @@
         </div>
       </div>
       
-
-    <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
           <a href="https://www.youtube.com/@sadat-akhavi-academy"><i class="fa fa-youtube-play w3-hover-opacity"></i></a>
           <a href="https://discord.gg/QrX6ekP8"><i class="fa fa-paper-plane-o w3-hover-opacity"></i></a>
-          <!-- <a href="https://www.facebook.com/profile.php?id=61559218501420&sk=about"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> -->
           <a href="https://www.instagram.com/sadat.akhavi.academy/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-          <!-- <a href=""><i class="fa fa-snapchat w3-hover-opacity"></i></a> -->
           <a href="https://www.tiktok.com/@sadat.a.academy"><i class="fa fa-ticket w3-hover-opacity"></i></a>
-          <!-- <a href="https://www.pinterest.com/sadatakhaviacademy"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a> -->
-          <!-- <a href="https://twitter.com/Sadat_A_Academy"><i class="fa fa-twitter w3-hover-opacity"></i></a> -->
           <a href="https://www.linkedin.com/company/sadat-akhavi-academy"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
 
 

@@ -36,7 +36,8 @@
     }
 
     function storeFunction() {
-        window.location.href = "https://www.ebay.com.au/usr/sadat_akhavi_academy";
+        window.location.href = "https://www.amazon.com.au/stores/page/F22B0A94-0234-4492-A8BA-35A1C2E15C9E";
+        // window.location.href = "https://www.ebay.com.au/usr/sadat_akhavi_academy";
         // alert("We are renovating our online store. It will be available soon.");
     }
 
