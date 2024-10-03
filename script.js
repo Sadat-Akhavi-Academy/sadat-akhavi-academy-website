@@ -1,3 +1,27 @@
+// Show the popup when the page loads
+window.onload = function() {
+    const popup = document.getElementById('video-popup');
+    const close = document.querySelector('.close');
+    
+    // Display the popup
+    popup.style.display = 'flex';
+
+    // Close the popup when the 'X' button is clicked
+    close.onclick = function() {
+        popup.style.display = 'none';
+        // Stop the video when the popup is closed
+        document.getElementById('youtube-video').src = '';
+    };
+
+    // Optional: Stop video on background click
+    popup.onclick = function(e) {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+            document.getElementById('youtube-video').src = '';
+        }
+    };
+};
+
 
     // get year for copy right notice
     document.getElementById("copyrightYear").textContent = new Date().getFullYear();
