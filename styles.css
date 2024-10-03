@@ -29,6 +29,10 @@ a.image-link::after {
 }
 
 a.image-link:hover::after {
+    font-size: 25px; /* Increase font size for larger dots */
+    content: "👆︎👆👆︎"; /* Display three dots */
+    
+    /* color: orange; */
     opacity: 1; /* Dots become fully opaque on hover */
 }
 /*  ---------------------------------------------
