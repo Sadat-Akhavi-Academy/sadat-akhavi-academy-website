@@ -16,7 +16,7 @@ a.image-link img {
 
 /* Style for clickable dots at image corner */
 a.image-link::after {
-    content: "..."; /* Display three dots */
+    content: "👆︎"; /* Display three dots */
     color: white;
     font-weight: bold;
     position: absolute;
@@ -24,13 +24,13 @@ a.image-link::after {
     right: 8px;
     font-size: 50px; /* Increase font size for larger dots */
     letter-spacing: 5px;  /* Add space between dots */
-    opacity: 0.5; /* Semi-transparent */
+    /* Semi-transparent */
+    /* opacity: 0.5;  */
     transition: opacity 0.2s ease-in-out; /* Smoother opacity change */
 }
 
 a.image-link:hover::after {
-    font-size: 25px; /* Increase font size for larger dots */
-    content: "👆︎👆👆︎"; /* Display three dots */
+    content: "👆"; /* Display three dots */
     
     /* color: orange; */
     opacity: 1; /* Dots become fully opaque on hover */
