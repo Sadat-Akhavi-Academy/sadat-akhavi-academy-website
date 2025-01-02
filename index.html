@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <div id="video-popup" class="popup">
+      <!-- <div id="video-popup" class="popup">
         <div class="popup-content">
             <span class="close">&times;</span>
             <div class="video-container">
@@ -29,7 +29,39 @@
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </div> -->
+    <div id="video-popup" class="popup">
+      <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="video-container">
+              <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=xCalawOYTzMO39WV" 
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="button-row">
+              <div class="button-column">
+                  <a href="https://sadat-akhavi-academy.eventbrite.com" class="icon-link">
+                      <div class="w3-center"  >
+                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                      </div>
+                      <div class="w3-center w3-large">
+                          <p>Workshops</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="button-column">
+                  <a onclick="storeFunction()"  class="icon-link">
+                      <div class="w3-center" >
+                          <i class="fa fa fa-truck" aria-hidden="true"></i>
+                      </div>
+                      <div class="w3-center w3-large">
+                          eStore
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
     <div class="w3-top">
         <!-- Desktop Menu -->
         <div class="w3-bar" id="myNavbar">
@@ -41,7 +73,7 @@
           <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
           <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
           <a onclick="storeFunction()" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> WORKSHOPS</a>
-          <a onclick="storeFunction()" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> eSTORE</a>
+          <a onclick="storeFunction()" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-truck"></i> eSTORE</a>
         </div>
       
 

@@ -206,8 +206,39 @@ min-height: 400px;
 }
 
 /* Video container */
+/* .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-column {
+    flex: 0 0 48%; /* Two columns side by side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 36px; /* Increase the icon size */
+}
+
+.icon-link i {
+    font-size: 100px; /* Adjust the size of the Font Awesome icon */
+    cursor: pointer;
 }
