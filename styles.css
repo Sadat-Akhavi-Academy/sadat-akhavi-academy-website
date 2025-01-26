@@ -234,3 +234,68 @@ min-height: 400px;
     font-size: 75px; /* Adjust the size of the Font Awesome icon */
     cursor: pointer;
 }
+
+
+  /* Navigation button styles */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    user-select: none;
+    z-index: 10;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Slide container styling to prevent overflow */
+  .slideshow-container {
+    position: relative;
+    overflow: hidden; /* Ensures arrows don't go outside the container */
+    max-width: 100%;
+  }
+
+  /* Slide indicator styles */
+  .dots-container {
+    text-align: center;
+    position: relative;
+    top: 10px;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+
+  /* Ensure slides stay inside the container */
+  .slide img {
+    width: 100%;
+    display: block;
+  }

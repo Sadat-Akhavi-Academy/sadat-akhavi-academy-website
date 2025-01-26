@@ -21,16 +21,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <!-- <div id="video-popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <div class="video-container">
-                <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=xCalawOYTzMO39WV" 
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div> -->
-
+<!-- 
   <div id="video-popup" class="popup">
     <div class="popup-content">
         <span class="close">&times;</span>
@@ -49,16 +40,6 @@
                   </div>
               </a>
           </div>
-          <!-- <div class="button-column w3-hover-text-black">
-            <a onclick="storeFunction()"  class="icon-link">
-                <div class="w3-center" >
-                    <i class="fa fa fa-bullhorn" aria-hidden="true"></i>
-                </div>
-                <div class="w3-center w3-medium">
-                    Special Offers
-                </div>
-            </a>
-          </div> -->
             <div class="button-column w3-hover-text-black">
               <a onclick="storeFunction()"  class="icon-link">
                   <div class="w3-center" >
@@ -71,7 +52,7 @@
           </div>
         </div>
     </div>
-</div>
+</div> -->
 
     <div class="w3-top">
         <!-- Desktop Menu -->
@@ -96,14 +77,73 @@
           <a onclick="storeFunction()" class="w3-bar-item w3-button"> eSTORE</a>
         </div>
       </div>
-        <div class="w3-display-container" style="margin-bottom:50px" id="home" >
-        <img src="images/alpha-dog_turbo_thumb-IMG_7717.png" style="width:100%">
-        <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
-        style="bottom:10%;opacity:0.7;width:70%">
-        <h2><b>Alpha Bike & Turbo Thumb<br>Perfect Partners</b></h2>
+        <div class="w3-display-container" style="margin-bottom:50px; position:relative;" id="home">
+          <div class="slideshow-container" style="position:relative; overflow:hidden;">
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="images/ABXX_TT_Plus.JPG" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+                style="bottom:10%;opacity:0.7;width:70%">
+                <h2><b>Alpha Bike+ & Turbo Thumb+<br>Your Ultimate Duo for Adventure</b></h2>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+              <img src="images/IMG_7846.JPG" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+              style="bottom:10%;opacity:0.7;width:70%">
+              <h2><b>Call for Adventure<br>New to Electronics? Join Our Workshops and Start Your Journey Today!</b></h2>
+            </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="slide" style="display:block;">
+              <img src="images/alpha-dog_turbo_thumb-IMG_7717.png" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+                style="bottom:10%;opacity:0.7;width:70%">
+                <h2><b>Alpha Bike & Turbo Thumb<br>Perfect Partners</b></h2>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="images/alpha_bike_x.png" style="width:100%">
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+              <img src="images/TT_Plus.JPG" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+                style="bottom:10%;opacity:0.7;width:70%">
+                <h2><b>Turbo Thumb+ <br> One Controller for all Your Remote Devices</b></h2>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img src="images/clockometer_IMG_7795.png" style="width:100%">
+              <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
+                style="bottom:10%;opacity:0.7;width:70%">
+                <h2><b>Clockometer <br> A Revolutionary Way to Experience Time</b></h2>
+              </div>
+            </div>
+        
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="images/ElecKit.JPG" style="width:100%">
+            </div>
+            <!-- Navigation Buttons -->
+            <button class="prev" onclick="navigateSlide(-1)">&#10094;</button>
+            <button class="next" onclick="navigateSlide(1)">&#10095;</button>
+          </div>
+        
+          <!-- Slide Indicators -->
+          <div class="dots-container">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+            <span class="dot" onclick="setSlide(4)"></span>
+            <span class="dot" onclick="setSlide(5)"></span>
+            <span class="dot" onclick="setSlide(6)"></span>
+          </div>
         </div>
-        </div>
-
         <div class="bgimg-4 w3-display-container w3-opacity-min filter-grayscale" id="portfolio">
             <div class="w3-display-middle">
               <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
@@ -114,6 +154,33 @@
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=4ShPdq1L3zH6Q976" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
   
+
+
+
+        <div class="w3-row w3-container" style="margin:50px 0">
+            
+          <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-orange">
+                <a href="pages/alpha_bike_x_plus.html" class="image-link">
+                    <!-- <img src="images/alphaBikeXng_gallery/IMG_4748.JPG" style="width:100%"> -->
+                    <img src="images/ABXplus.JPG" style="width:100%">
+                </a>
+                <h2>Alpha Bike +</h2>
+                <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
+            </div>
+          </div>
+
+          <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-amber">
+                <a href="pages/turbo_thumb_plus.html"  class="image-link">
+                    <img src="images/TTplus.JPG" style="width:100%">
+                </a>
+                <h2>Turbo Thumb +</h2>
+                <p>Make one and control All ! Turbo thumb+ is awesome, it is one controller you bulid yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.</p>
+            </div>
+          </div>
+
+        </div>
 
         
         <div class="w3-row w3-container" style="margin:50px 0">
@@ -134,14 +201,28 @@
                     <img src="images/turbo-thumb-IMG_7717.png" style="width:100%">
                 </a>
                 <h2>Turbo Thumb</h2>
+                <p><b>Retiring Soon – Discover the New Turbo Thumb+ !</b></p>
                 <p>Make one and control All ! Turbo thumb is awesome, it is one controller you bulid yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.</p>
             </div>
           </div>
 
         </div>
 
+
         <div class="w3-row w3-container" style="margin:50px 0">
      
+          
+          <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-amber">
+                <a href="pages/alpha_bike_x.html" class="image-link">
+                  <img src="images/alpha_bike_x.png" style="width:100%">
+                </a>
+                <h2>Alpha Bike X</h2>
+                <p><b>Retiring Soon – Discover the New Alpha Bike X+ !</b></p>
+                <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
+
+            </div>
+          </div>
           <div class="w3-half w3-container">
             <div class="w3-topbar w3-border-amber">
                 <a href="pages/alpha_bike_j.html" class="image-link">
@@ -158,30 +239,17 @@
           </div>
 
 
-          
-          <div class="w3-half w3-container">
-            <div class="w3-topbar w3-border-amber">
-                <a href="pages/alpha_bike_x.html" class="image-link">
-                  <img src="images/alpha_bike_x.png" style="width:100%">
-                </a>
-                <h2>Alpha Bike X </h2>
-                <p>Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.</p>
-            </div>
-          </div>
         <div class="w3-row w3-container" style="margin:50px 0">
 
-          
           <div class="w3-half w3-container">
-            <div class="w3-topbar w3-border-amber">
-                <!-- <a href="pages/alpha_bike_x.html" class="image-link"> -->
-                  <a class="image-link"></a>
-                  <img src="images/alphaBikeXng_gallery/IMG_4748.JPG" style="width:100%">
-                </a>
-                <h2>Alpha Bike X + </h2>
-                <p>Coming Soon...</p>
+            <div class="w3-topbar w3-border-orange">
+                <div class="filter-blur">
+                    <img src="images/3d-791205_640_pixabay.jpg" style="width:100%">
+                </div>
+                <h2>New Arrivals</h2>
+                <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
+                </div>
             </div>
-          </div>
-
           <div class="w3-half w3-container">
           <div class="w3-topbar w3-border-orange">
               <div class="filter-blur">

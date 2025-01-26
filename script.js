@@ -1,3 +1,59 @@
+
+
+////////////////////////////////////
+/// landing page Slide show 
+
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let firstSlideDuration = 3500; // 3 seconds
+let otherSlidesDuration = 2500; // 10 seconds
+let slideTimer;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? 'block' : 'none';
+  });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function navigateSlide(direction) {
+  clearTimeout(slideTimer);
+  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+  startSlideshow(false);
+}
+
+function setSlide(index) {
+  clearTimeout(slideTimer);
+  currentIndex = index;
+  startSlideshow(false);
+}
+
+function startSlideshow(auto = true) {
+  showSlide(currentIndex);
+  if (auto) {
+    let duration = currentIndex === 0 ? firstSlideDuration : otherSlidesDuration;
+    slideTimer = setTimeout(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      startSlideshow();
+    }, duration);
+  }
+}
+
+// Initialize the slideshow
+startSlideshow();
+
+
+/// landing page Slide show 
+////////////////////////////////////
+
+
+
+
+
+
 // Show the popup when the page loads
 window.onload = function() {
     const popup = document.getElementById('video-popup');
