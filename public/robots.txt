@@ -1,0 +1,26 @@
+# robots.txt for Sadat Akhavi Academy
+# Educational institution teaching STEM, Robotics, Electronics, IoT, 3D Printing, and Programming
+
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://sadat-akhavi-academy.com/sitemap.xml
+
+# Disallow admin or sensitive areas if any (currently none)
+# Disallow: /admin/
+
+# Allow all search engines to crawl educational content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1

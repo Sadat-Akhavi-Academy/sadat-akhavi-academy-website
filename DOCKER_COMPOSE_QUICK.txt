@@ -1,0 +1,106 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║               DOCKER COMPOSE QUICK REFERENCE                      ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+🚀 START DEVELOPMENT SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose up dev
+
+    ✓ Runs on http://localhost:3000
+    ✓ Hot reload enabled (changes appear instantly)
+    ✓ No need to run npm install
+    ✓ Source code is mounted (edit on host, see in container)
+
+    Stop with: Ctrl+C or docker-compose down
+
+
+🛠️ DEVELOPMENT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose up dev              # Start (foreground)
+    docker-compose up -d dev           # Start (background)
+    docker-compose logs -f dev         # View logs
+    docker-compose restart dev         # Restart
+    docker-compose down                # Stop all
+    docker-compose up --build dev      # Rebuild & start
+
+
+📦 INSTALL NEW PACKAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose exec dev npm install package-name
+    docker-compose restart dev
+
+
+🧪 TEST PRODUCTION BUILD LOCALLY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose --profile production up --build prod
+
+    ✓ Runs on http://localhost:8080
+    ✓ Tests your production build
+    ✓ Can run alongside dev server
+
+
+🔍 DEBUGGING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose logs -f dev         # Follow logs
+    docker-compose exec dev sh         # Shell access
+    docker-compose ps                  # List containers
+    docker stats                       # Resource usage
+
+
+🧹 CLEANUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    docker-compose down                # Stop containers
+    docker-compose down -v             # Stop + remove volumes
+    docker-compose down --rmi all      # Stop + remove images
+
+
+📝 TYPICAL WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    1. Start dev server:
+       $ docker-compose up dev
+
+    2. Edit files in your editor
+       Changes appear automatically in browser
+
+    3. Done? Stop:
+       $ docker-compose down
+
+
+💡 TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Changes to package.json? → docker-compose up --build dev
+• Hot reload not working? → Already using polling mode
+• Need to run npm command? → docker-compose exec dev npm ...
+• Both dev and prod can run together on different ports
+• Source code is mounted - no need to rebuild for changes
+
+
+🆘 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Container won't start
+    → docker-compose logs dev
+
+Problem: Need fresh start
+    → docker-compose down -v
+    → docker-compose up --build dev
+
+Problem: Port 3000 in use
+    → Edit docker-compose.yml: "3001:3000"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 Full documentation in DOCKER_COMPOSE.md
+
+🚀 Ready? Run: docker-compose up dev

@@ -1,0 +1,291 @@
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*  ---------------------------------------------
+Start - Style for clickable image with dots 
+---------------------------------------------*/
+a.image-link {
+    display: block;
+    position: relative;
+}
+
+a.image-link img {
+    border: none;
+}
+
+/* Style for clickable dots at image corner */
+a.image-link::after {
+    content: "👆︎";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+a.image-link:hover::after {
+    content: "👆";
+    opacity: 1;
+}
+/*  ---------------------------------------------
+    End - Style for clickable image with dots 
+    ---------------------------------------------*/
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-4 {
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter-grayscale {
+    filter: grayscale(100%);
+}
+
+.filter-blur {
+    filter: blur(4px);
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/images/saa_logo_11.png');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/images/e-commerce-3692440_1280.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/images/IMG_7846.JPG");
+  min-height: 400px;
+}
+
+/* Four image (Portfolio) */
+.bgimg-4 {
+  background-image: url("/images/workshop-3d-printer.png");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      background-attachment: scroll;
+      min-height: 400px;
+  }
+}
+
+#homePageBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#homePageBtn:hover {
+    background-color: #555;
+}
+
+#pageTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 270px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#pageTopBtn:hover {
+    background-color: #555;
+}
+
+#pageTopStoreBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 140px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#pageTopStoreBtn:hover {
+    background-color: #555;
+}
+
+/* Greyed out background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pop-up content */
+.popup-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Close button (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-column {
+    flex: 0 0 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 36px;
+}
+
+.icon-link i {
+    font-size: 75px;
+    cursor: pointer;
+}
+
+/* Navigation button styles */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slide container styling to prevent overflow */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Slide indicator styles */
+.dots-container {
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Ensure slides stay inside the container */
+.slide img {
+    width: 100%;
+    display: block;
+}

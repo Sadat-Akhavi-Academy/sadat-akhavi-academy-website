@@ -1,0 +1,20 @@
+# Docker ignore file for Next.js application
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env*.local
+.DS_Store
+*.pem
+coverage
+.vscode
+.idea
+*.log
+.cache
+
+# Only ignore these for production build
+# For dev, we mount volumes instead
+# .next
+# out
+# dist
+# build
