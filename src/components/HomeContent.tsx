@@ -1,8 +1,20 @@
 'use client'
 
 import ClientScripts from '@/components/ClientScripts'
+import { getProductsGroupedByCategories, getCategoryDisplayName, getRetiringMessage, type ProductCategory } from '@/data/products'
 
 export default function HomeContent() {
+  const groupedProducts = getProductsGroupedByCategories()
+  
+  // Define the order categories should appear on homepage
+  const categoryOrder: ProductCategory[] = [
+    'new-arrivals',
+    'scholarships',
+    'training-packages',
+    'packaged-kits',
+    'electronics-kits',
+    'mechanical-structural-kits'
+  ]
   return (
     <>
       <ClientScripts />
@@ -152,97 +164,83 @@ export default function HomeContent() {
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=4ShPdq1L3zH6Q976" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
 
-      <div className="w3-row w3-container" style={{margin: '50px 0'}}>
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-orange">
-            <a href="/pages/alpha_bike_x_plus" className="image-link">
-              <img src="/images/ABXplus.JPG" style={{width: '100%'}} alt="Alpha Bike +" />
-            </a>
-            <h2>Alpha Bike +</h2>
-            <p>Alpha isn&apos;t just a bike; it&apos;s a symbol. It&apos;s cruising in style. When you build your own Alpha, you&apos;re not just following instructions; you&apos;re crafting confidence and forging your own path.</p>
-          </div>
-        </div>
-
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-amber">
-            <a href="/pages/turbo_thumb_plus" className="image-link">
-              <img src="/images/TTplus.JPG" style={{width: '100%'}} alt="Turbo Thumb +" />
-            </a>
-            <h2>Turbo Thumb +</h2>
-            <p>Make one and control All ! Turbo thumb+ is awesome, it is one controller you build yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="w3-row w3-container" style={{margin: '50px 0'}}>
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-orange">
-            <a href="/pages/clockometer" className="image-link">
-              <img src="/images/clockometer_IMG_7795.png" style={{width: '100%'}} alt="Clockometer" />
-            </a>
-            <h2>Clockometer</h2>
-            <p>Experience time like never before - the ultimate timepiece for young car lovers! Clockometer doesn&apos;t just tell time; it brings time to life in a whole new, exciting way.</p>
-          </div>
-        </div>
-
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-amber">
-            <a href="/pages/turbo-thumb" className="image-link">
-              <img src="/images/turbo-thumb-IMG_7717.png" style={{width: '100%'}} alt="Turbo Thumb" />
-            </a>
-            <h2>Turbo Thumb</h2>
-            <p><b>Retiring Soon – Discover the New Turbo Thumb+ !</b></p>
-            <p>Make one and control All ! Turbo thumb is awesome, it is one controller you build yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="w3-row w3-container" style={{margin: '50px 0'}}>
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-amber">
-            <a href="/pages/alpha_bike_x" className="image-link">
-              <img src="/images/alpha_bike_x.png" style={{width: '100%'}} alt="Alpha Bike X" />
-            </a>
-            <h2>Alpha Bike X</h2>
-            <p><b>Retiring Soon – Discover the New Alpha Bike X+ !</b></p>
-            <p>Alpha isn&apos;t just a bike; it&apos;s a symbol. It&apos;s cruising in style. When you build your own Alpha, you&apos;re not just following instructions; you&apos;re crafting confidence and forging your own path.</p>
-          </div>
-        </div>
-
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-amber">
-            <a href="/pages/alpha_bike_j" className="image-link">
-              <img src="/images/alpha_bike_j_mod4.jpg" style={{width: '100%'}} alt="Alpha Bike J" />
-            </a>
-            <h2>Alpha Bike J</h2>
-            <p>
-              Alpha Bike Junior is beginner-friendly. It is nimble, sharp, and loves to show off its speed with dynamic moves! J features a half-soldered PCB, making it perfect for youngsters eager to learn.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="w3-row w3-container" style={{margin: '50px 0'}}>
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-orange">
-            <div className="filter-blur">
-              <img src="/images/3d-791205_640_pixabay.jpg" style={{width: '100%'}} alt="New Arrivals" />
+      {/* Render products grouped by categories */}
+      {categoryOrder.map((category, catIndex) => {
+        const products = groupedProducts[category]
+        
+        // Skip empty categories
+        if (products.length === 0) return null
+        
+        return (
+          <div key={category}>
+            {/* Category Header */}
+            <div className="w3-container w3-padding-32">
+              <h3 className="w3-center w3-xxxlarge w3-text-orange">
+                {getCategoryDisplayName(category)}
+              </h3>
             </div>
-            <h2>New Arrivals</h2>
-            <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
-          </div>
-        </div>
 
-        <div className="w3-half w3-container">
-          <div className="w3-topbar w3-border-orange">
-            <div className="filter-blur">
-              <img src="/images/3d-791205_640_pixabay.jpg" style={{width: '100%'}} alt="New Arrivals" />
-            </div>
-            <h2>New Arrivals</h2>
-            <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
+            {/* Products in this category */}
+            {products.reduce<JSX.Element[]>((acc, product, index) => {
+              // Group products in pairs
+              if (index % 2 === 0) {
+                const nextProduct = products[index + 1]
+                const retiringMessage = getRetiringMessage(product.productCode)
+                const nextRetiringMessage = nextProduct ? getRetiringMessage(nextProduct.productCode) : null
+                
+                acc.push(
+                  <div key={product.productCode} className="w3-row w3-container" style={{margin: '50px 0'}}>
+                    <div className="w3-half w3-container">
+                      <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-orange' : 'w3-border-amber'}`}>
+                        <a href={`/pages/${product.slug}`} className="image-link">
+                          <img src={product.mainImage} style={{width: '100%'}} alt={product.title} />
+                        </a>
+                        <h2>{product.title}</h2>
+                        {retiringMessage && <p><b>{retiringMessage}</b></p>}
+                        <p>{product.homeSummary}</p>
+                      </div>
+                    </div>
+
+                    {nextProduct ? (
+                      <div className="w3-half w3-container">
+                        <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-amber' : 'w3-border-orange'}`}>
+                          <a href={`/pages/${nextProduct.slug}`} className="image-link">
+                            <img src={nextProduct.mainImage} style={{width: '100%'}} alt={nextProduct.title} />
+                          </a>
+                          <h2>{nextProduct.title}</h2>
+                          {nextRetiringMessage && <p><b>{nextRetiringMessage}</b></p>}
+                          <p>{nextProduct.homeSummary}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="w3-half w3-container">
+                        {/* Empty space for odd number of products */}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+              return acc
+            }, [])}
+
+            {/* Show "Coming Soon" placeholders for New Arrivals category */}
+            {category === 'new-arrivals' && (
+              <div className="w3-row w3-container" style={{margin: '50px 0'}}>
+                <div className="w3-half w3-container">
+                  <div className="w3-topbar w3-border-orange">
+                    <div className="filter-blur">
+                      <img src="/images/3d-791205_640_pixabay.jpg" style={{width: '100%'}} alt="New Arrivals Coming Soon" />
+                    </div>
+                    <h2>New Arrivals</h2>
+                    <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
+                  </div>
+                </div>
+
+              </div>
+            )}
           </div>
-        </div>
-      </div>
+        )
+      })}
 
       <div className="bgimg-2 w3-display-container w3-opacity-min" id="home">
         <div className="w3-display-middle" style={{whiteSpace: 'nowrap'}}>
@@ -337,13 +335,13 @@ export default function HomeContent() {
       <footer className="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" className="w3-button w3-light-grey"><i className="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div className="w3-xlarge w3-section">
-          <a href="https://sadat-akhavi-academy.eventbrite.com"><i className="fa fa-calendar w3-hover-opacity"></i></a>
-          <a href="https://www.youtube.com/@sadat-akhavi-academy"><i className="fa fa-youtube-play w3-hover-opacity"></i></a>
-          <a href="https://discord.gg/2fA3ypEcHb"><i className="fa fa-paper-plane-o w3-hover-opacity"></i></a>
-          <a href="https://x.com/Sadat_A_Academy"><i className="fa fa-twitter w3-hover-opacity"></i></a>
-          <a href="https://www.instagram.com/sadat.akhavi.academy/"><i className="fa fa-instagram w3-hover-opacity"></i></a>
-          <a href="https://www.facebook.com/sadat.akhavi.academy"><i className="fa fa-facebook-official w3-hover-opacity"></i></a>
-          <a href="https://www.tiktok.com/@sadat.a.academy"><i className="fa fa-ticket w3-hover-opacity"></i></a>
+          <a href="https://sadat-akhavi-academy.eventbrite.com" className="w3-margin-right"><i className="fa fa-calendar w3-hover-opacity"></i></a>
+          <a href="https://www.youtube.com/@sadat-akhavi-academy" className="w3-margin-right"><i className="fa fa-youtube-play w3-hover-opacity"></i></a>
+          <a href="https://discord.gg/2fA3ypEcHb" className="w3-margin-right"><i className="fa fa-paper-plane-o w3-hover-opacity"></i></a>
+          <a href="https://x.com/Sadat_A_Academy" className="w3-margin-right"><i className="fa fa-twitter w3-hover-opacity"></i></a>
+          <a href="https://www.instagram.com/sadat.akhavi.academy/" className="w3-margin-right"><i className="fa fa-instagram w3-hover-opacity"></i></a>
+          <a href="https://www.facebook.com/sadat.akhavi.academy" className="w3-margin-right"><i className="fa fa-facebook-official w3-hover-opacity"></i></a>
+          <a href="https://www.tiktok.com/@sadat.a.academy" className="w3-margin-right"><i className="fa fa-ticket w3-hover-opacity"></i></a>
           <a href="https://www.linkedin.com/company/sadat-akhavi-academy"><i className="fa fa-linkedin w3-hover-opacity"></i></a>
         </div>
         <p>&copy; <span id="copyrightYear"></span> Sadat Akhavi Academy (Xigrom Pty Ltd). All rights reserved.</p>

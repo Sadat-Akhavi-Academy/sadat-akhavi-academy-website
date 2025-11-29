@@ -2,10 +2,12 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { getProductByCode } from '@/data/products'
 
 interface ProductPageProps {
   title: string
   slug: string
+  productCode: string
   mainImage: string
   description: string[]
   introVideoId: string
@@ -17,7 +19,7 @@ interface ProductPageProps {
   softwareUrl?: string
   gallery: string[]
   skills: Array<{ icon: string; name: string }>
-  relatedKits?: Array<{ title: string; slug: string }>
+  relatedProductCodes?: string[]
   metadata: {
     ogImage: string
     keywords: string
@@ -27,6 +29,7 @@ interface ProductPageProps {
 export default function ProductPage({ 
   title, 
   slug,
+  productCode,
   mainImage, 
   description, 
   introVideoId,
@@ -38,9 +41,12 @@ export default function ProductPage({
   softwareUrl,
   gallery,
   skills,
-  relatedKits,
+  relatedProductCodes,
   metadata 
 }: ProductPageProps) {
+  // Resolve related product codes to full product data
+  const relatedKits = relatedProductCodes?.map(code => getProductByCode(code)).filter(Boolean) as Array<{ title: string; slug: string; productCode: string }> | undefined
+  
   useEffect(() => {
     const copyrightYearElement = document.getElementById("copyrightYear")
     if (copyrightYearElement) {
@@ -286,13 +292,13 @@ export default function ProductPage({
       <footer className="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" className="w3-button w3-light-grey"><i className="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div className="w3-xlarge w3-section">
-          <a href="https://sadat-akhavi-academy.eventbrite.com"><i className="fa fa-calendar w3-hover-opacity"></i></a>
-          <a href="https://www.youtube.com/@sadat-akhavi-academy"><i className="fa fa-youtube-play w3-hover-opacity"></i></a>
-          <a href="https://discord.gg/2fA3ypEcHb"><i className="fa fa-paper-plane-o w3-hover-opacity"></i></a>
-          <a href="https://x.com/Sadat_A_Academy"><i className="fa fa-twitter w3-hover-opacity"></i></a>
-          <a href="https://www.facebook.com/sadat.akhavi.academy"><i className="fa fa-facebook-official w3-hover-opacity"></i></a>
-          <a href="https://www.instagram.com/sadat.akhavi.academy/"><i className="fa fa-instagram w3-hover-opacity"></i></a>
-          <a href="https://www.tiktok.com/@sadat.a.academy"><i className="fa fa-ticket w3-hover-opacity"></i></a>
+          <a href="https://sadat-akhavi-academy.eventbrite.com" className="w3-margin-right"><i className="fa fa-calendar w3-hover-opacity"></i></a>
+          <a href="https://www.youtube.com/@sadat-akhavi-academy" className="w3-margin-right"><i className="fa fa-youtube-play w3-hover-opacity"></i></a>
+          <a href="https://discord.gg/2fA3ypEcHb" className="w3-margin-right"><i className="fa fa-paper-plane-o w3-hover-opacity"></i></a>
+          <a href="https://x.com/Sadat_A_Academy" className="w3-margin-right"><i className="fa fa-twitter w3-hover-opacity"></i></a>
+          <a href="https://www.facebook.com/sadat.akhavi.academy" className="w3-margin-right"><i className="fa fa-facebook-official w3-hover-opacity"></i></a>
+          <a href="https://www.instagram.com/sadat.akhavi.academy/" className="w3-margin-right"><i className="fa fa-instagram w3-hover-opacity"></i></a>
+          <a href="https://www.tiktok.com/@sadat.a.academy" className="w3-margin-right"><i className="fa fa-ticket w3-hover-opacity"></i></a>
           <a href="https://www.linkedin.com/company/sadat-akhavi-academy"><i className="fa fa-linkedin w3-hover-opacity"></i></a>
         </div>
         <p>&copy; <span id="copyrightYear"></span> Sadat Akhavi Academy (Xigrom Pty Ltd). All rights reserved.</p>
