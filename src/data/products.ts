@@ -17,6 +17,15 @@ export interface ProductData {
   title: string                   // Display title
   status?: 'active' | 'retiring'  // Product status
   
+  // Product Flags/Badges
+  isNewArrival?: boolean          // Badge: New Arrival
+  isRetired?: boolean             // Badge: Retired/Discontinued
+  isHot?: boolean                 // Badge: Hot/Trending item
+  isSoldOut?: boolean             // Badge: Currently sold out
+  isLowStock?: boolean            // Badge: Low stock warning
+  isOnSale?: boolean              // Badge: On sale/discounted
+  isSpecial?: boolean             // Badge: Special edition/featured
+  
   // Homepage Display Categories
   categories: Array<
     'new-arrivals' | 
@@ -81,6 +90,10 @@ export const products: ProductData[] = [
     slug: 'alpha_bike_x_plus',
     title: 'Alpha Bike X+',
     status: 'active',
+    
+    // Product Flags/Badges
+    isSpecial: true,
+    
     categories: ['new-arrivals', 'packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
     metaTitle: 'Alpha Bike X+ - Advanced RC Bike Kit | Sadat Akhavi Academy',
     metaDescription: 'Build the advanced Alpha Bike X+ - a feature-rich remote-controlled bike for learning electronics, robotics, ESP32 programming, and advanced mechatronics.',
@@ -202,6 +215,10 @@ export const products: ProductData[] = [
     slug: 'alpha_bike_x',
     title: 'Alpha Bike X',
     status: 'retiring',
+    
+    // Product Flags/Badges
+    isRetired: true,
+    
     categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
     metaTitle: 'Alpha Bike X - RC Bike Kit | Sadat Akhavi Academy',
     metaDescription: 'Build your own Alpha Bike X - a remote-controlled bike for learning electronics, robotics, and ESP32 programming. Now retiring - check out the new Alpha Bike X+!',
@@ -237,6 +254,10 @@ export const products: ProductData[] = [
     slug: 'turbo-thumb',
     title: 'Turbo Thumb',
     status: 'retiring',
+    
+    // Product Flags/Badges
+    isRetired: true,
+    
     categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
     metaTitle: 'Turbo Thumb - RC Controller Kit | Sadat Akhavi Academy',
     metaDescription: 'Build the Turbo Thumb - a modular universal controller for RC devices. Now retiring - check out the new Turbo Thumb+!',
@@ -306,6 +327,11 @@ export const products: ProductData[] = [
     slug: 'mechanical_kit_1',
     title: 'Mechanical Kit 1',
     status: 'active',
+    
+    // Product Flags/Badges
+    isNewArrival: true,
+    isHot: true,
+    
     categories: ['new-arrivals', 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 1 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 1 - precision 3D printed parts for structural and mechanical projects.',
@@ -360,6 +386,11 @@ export const products: ProductData[] = [
     slug: 'mechanical_kit_3',
     title: 'Mechanical Kit 3',
     status: 'active',
+    
+    // Product Flags/Badges
+    isOnSale: true,
+    isLowStock: true,
+    
     categories: ['new-arrivals', 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 3 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 3 - precision 3D printed parts for structural and mechanical projects.',

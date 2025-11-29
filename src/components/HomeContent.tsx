@@ -1,6 +1,7 @@
 'use client'
 
 import ClientScripts from '@/components/ClientScripts'
+import ProductBadge from '@/components/ProductBadge'
 import { getProductsGroupedByCategories, getCategoryDisplayName, getRetiringMessage, type ProductCategory } from '@/data/products'
 
 export default function HomeContent() {
@@ -192,9 +193,12 @@ export default function HomeContent() {
                   <div key={product.productCode} className="w3-row w3-container" style={{margin: '50px 0'}}>
                     <div className="w3-half w3-container">
                       <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-orange' : 'w3-border-amber'}`}>
-                        <a href={`/pages/${product.slug}`} className="image-link">
-                          <img src={product.mainImage} style={{width: '100%'}} alt={product.title} />
-                        </a>
+                        <div className="product-badge-container">
+                          <a href={`/pages/${product.slug}`} className="image-link">
+                            <img src={product.mainImage} style={{width: '100%'}} alt={product.title} />
+                          </a>
+                          <ProductBadge product={product} />
+                        </div>
                         <h2>{product.title}</h2>
                         {retiringMessage && <p><b>{retiringMessage}</b></p>}
                         <p>{product.homeSummary}</p>
@@ -204,9 +208,12 @@ export default function HomeContent() {
                     {nextProduct ? (
                       <div className="w3-half w3-container">
                         <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-amber' : 'w3-border-orange'}`}>
-                          <a href={`/pages/${nextProduct.slug}`} className="image-link">
-                            <img src={nextProduct.mainImage} style={{width: '100%'}} alt={nextProduct.title} />
-                          </a>
+                          <div className="product-badge-container">
+                            <a href={`/pages/${nextProduct.slug}`} className="image-link">
+                              <img src={nextProduct.mainImage} style={{width: '100%'}} alt={nextProduct.title} />
+                            </a>
+                            <ProductBadge product={nextProduct} />
+                          </div>
                           <h2>{nextProduct.title}</h2>
                           {nextRetiringMessage && <p><b>{nextRetiringMessage}</b></p>}
                           <p>{nextProduct.homeSummary}</p>
