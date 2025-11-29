@@ -186,7 +186,7 @@ export default function ProductPage({
                     <p className="w3-large"><b><i className="fa fa-link fa-fw w3-margin-right w3-text-black"></i>Related Kits</b></p>
                     {relatedKits.map((kit, idx) => (
                       <p key={idx}><i className="fa fa-caret-right fa-fw w3-margin-right w3-medium w3-text-black"></i>
-                        <Link href={`/pages/${kit.slug}`}>{kit.title}</Link>
+                        <Link href={`/products/${kit.slug}`}>{kit.title}</Link>
                       </p>
                     ))}
                   </>

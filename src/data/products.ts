@@ -99,7 +99,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build the advanced Alpha Bike X+ - a feature-rich remote-controlled bike for learning electronics, robotics, ESP32 programming, and advanced mechatronics.',
     metaKeywords: 'Alpha Bike X Plus, advanced robotics kit, RC bike, electronics project, ESP32, STEM education, 3D printing, mechatronics',
     ogImage: 'https://sadat-akhavi-academy.com/images/ABXplus.JPG',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/alpha_bike_x_plus',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_x_plus',
     mainImage: '/images/ABXplus.JPG',
     gallery: [
       '/images/ABXplus.JPG',
@@ -135,7 +135,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build your own Turbo Thumb+ - a modular universal controller for all your RC devices. Learn electronics, ESP32 programming, and wireless communication.',
     metaKeywords: 'Turbo Thumb Plus, RC controller, DIY controller, ESP32, wireless control, robotics, electronics kit',
     ogImage: 'https://sadat-akhavi-academy.com/images/TTplus.JPG',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/turbo_thumb_plus',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/turbo_thumb_plus',
     mainImage: '/images/TTplus.JPG',
     gallery: [
       '/images/TTplus.JPG',
@@ -171,7 +171,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build your own Alpha Bike J - a beginner-friendly remote-controlled bike perfect for learning electronics, robotics, 3D printing, and ESP32 programming. Features partially pre-soldered PCB for easy assembly.',
     metaKeywords: 'Alpha Bike J, DIY robotics kit, RC bike, electronics kit for beginners, ESP32 robotics project, STEM learning kit, 3D printing project, Arduino bike, robotics education, soldering practice, mechatronics kit',
     ogImage: 'https://sadat-akhavi-academy.com/images/alpha_bike_j_mod4.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/alpha_bike_j',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_j',
     mainImage: '/images/alpha_bike_j_mod4.jpg',
     gallery: [
       '/images/alphaBikeJ_gallery/alpha_bike_j_mod4_gitlab2.jpg',
@@ -224,7 +224,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build your own Alpha Bike X - a remote-controlled bike for learning electronics, robotics, and ESP32 programming. Now retiring - check out the new Alpha Bike X+!',
     metaKeywords: 'Alpha Bike X, robotics kit, RC bike, electronics project, ESP32, STEM education',
     ogImage: 'https://sadat-akhavi-academy.com/images/alpha_bike_x.png',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/alpha_bike_x',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_x',
     mainImage: '/images/alpha_bike_x.png',
     gallery: [
       '/images/alpha_bike_x.png',
@@ -263,7 +263,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build the Turbo Thumb - a modular universal controller for RC devices. Now retiring - check out the new Turbo Thumb+!',
     metaKeywords: 'Turbo Thumb, RC controller, DIY controller, ESP32, wireless control, robotics',
     ogImage: 'https://sadat-akhavi-academy.com/images/turbo-thumb-IMG_7717.png',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/turbo-thumb',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/turbo-thumb',
     mainImage: '/images/turbo-thumb-IMG_7717.png',
     gallery: [
       '/images/turbo-thumb-IMG_7717.png',
@@ -298,7 +298,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build the Clockometer - a revolutionary timepiece that brings time to life! Perfect for young car lovers and electronics enthusiasts.',
     metaKeywords: 'Clockometer, DIY clock, electronics project, ESP32 clock, STEM education, unique timepiece',
     ogImage: 'https://sadat-akhavi-academy.com/images/clockometer_IMG_7795.png',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/clockometer',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/clockometer',
     mainImage: '/images/clockometer_IMG_7795.png',
     gallery: [
       '/images/clockometer_IMG_7795.png'
@@ -337,7 +337,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 1 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5499.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_1',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_1',
     mainImage: '/images/newArrival/IMG_5499.jpg',
     gallery: ['/images/newArrival/IMG_5499.jpg'],
     description: [
@@ -364,7 +364,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 2 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5506_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_2',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_2',
     mainImage: '/images/newArrival/IMG_5506_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5506_mod01.jpg'],
     description: [
@@ -396,7 +396,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 3 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5513_mod_01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_3',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_3',
     mainImage: '/images/newArrival/IMG_5513_mod_01.jpg',
     gallery: ['/images/newArrival/IMG_5513_mod_01.jpg'],
     description: [
@@ -423,7 +423,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 4 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5523_mod_01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_4',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_4',
     mainImage: '/images/newArrival/IMG_5523_mod_01.jpg',
     gallery: ['/images/newArrival/IMG_5523_mod_01.jpg'],
     description: [
@@ -450,7 +450,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 5 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5525_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_5',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_5',
     mainImage: '/images/newArrival/IMG_5525_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5525_mod01.jpg'],
     description: [
@@ -477,7 +477,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 6 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5542_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_6',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_6',
     mainImage: '/images/newArrival/IMG_5542_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5542_mod01.jpg'],
     description: [
@@ -504,7 +504,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 7 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5553_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_7',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_7',
     mainImage: '/images/newArrival/IMG_5553_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5553_mod01.jpg'],
     description: [
@@ -531,7 +531,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 8 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5559_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_8',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_8',
     mainImage: '/images/newArrival/IMG_5559_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5559_mod01.jpg'],
     description: [
@@ -558,7 +558,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 9 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5563_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_9',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_9',
     mainImage: '/images/newArrival/IMG_5563_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5563_mod01.jpg'],
     description: [
@@ -585,7 +585,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 10 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5565_mod01.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_10',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_10',
     mainImage: '/images/newArrival/IMG_5565_mod01.jpg',
     gallery: ['/images/newArrival/IMG_5565_mod01.jpg'],
     description: [
@@ -612,7 +612,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 11 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5573_mod4.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_11',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_11',
     mainImage: '/images/newArrival/IMG_5573_mod4.jpg',
     gallery: ['/images/newArrival/IMG_5573_mod4.jpg'],
     description: [
@@ -639,7 +639,7 @@ export const products: ProductData[] = [
     metaDescription: 'Build with our Mechanical Kit 12 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5577_mode3.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/pages/mechanical_kit_12',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_12',
     mainImage: '/images/newArrival/IMG_5577_mode3.jpg',
     gallery: ['/images/newArrival/IMG_5577_mode3.jpg'],
     description: [

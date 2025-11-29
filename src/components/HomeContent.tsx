@@ -1,8 +1,8 @@
 'use client'
 
 import ClientScripts from '@/components/ClientScripts'
-import ProductBadge from '@/components/ProductBadge'
-import { getProductsGroupedByCategories, getCategoryDisplayName, getRetiringMessage, type ProductCategory } from '@/data/products'
+import CategorySection from '@/components/CategorySection'
+import { getProductsGroupedByCategories, getCategoryDisplayName, type ProductCategory } from '@/data/products'
 
 export default function HomeContent() {
   const groupedProducts = getProductsGroupedByCategories()
@@ -165,89 +165,23 @@ export default function HomeContent() {
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=4ShPdq1L3zH6Q976" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
 
-      {/* Render products grouped by categories */}
-      {categoryOrder.map((category, catIndex) => {
-        const products = groupedProducts[category]
-        
-        // Skip empty categories
-        if (products.length === 0) return null
-        
-        return (
-          <div key={category}>
-            {/* Category Header */}
-            <div className="w3-container w3-padding-32">
-              <h3 className="w3-center w3-xxxlarge w3-text-orange">
-                {getCategoryDisplayName(category)}
-              </h3>
-            </div>
-
-            {/* Products in this category */}
-            {products.reduce<JSX.Element[]>((acc, product, index) => {
-              // Group products in pairs
-              if (index % 2 === 0) {
-                const nextProduct = products[index + 1]
-                const retiringMessage = getRetiringMessage(product.productCode)
-                const nextRetiringMessage = nextProduct ? getRetiringMessage(nextProduct.productCode) : null
-                
-                acc.push(
-                  <div key={product.productCode} className="w3-row w3-container" style={{margin: '50px 0'}}>
-                    <div className="w3-half w3-container">
-                      <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-orange' : 'w3-border-amber'}`}>
-                        <div className="product-badge-container">
-                          <a href={`/pages/${product.slug}`} className="image-link">
-                            <img src={product.mainImage} style={{width: '100%'}} alt={product.title} />
-                          </a>
-                          <ProductBadge product={product} />
-                        </div>
-                        <h2>{product.title}</h2>
-                        {retiringMessage && <p><b>{retiringMessage}</b></p>}
-                        <p>{product.homeSummary}</p>
-                      </div>
-                    </div>
-
-                    {nextProduct ? (
-                      <div className="w3-half w3-container">
-                        <div className={`w3-topbar ${index % 4 === 0 ? 'w3-border-amber' : 'w3-border-orange'}`}>
-                          <div className="product-badge-container">
-                            <a href={`/pages/${nextProduct.slug}`} className="image-link">
-                              <img src={nextProduct.mainImage} style={{width: '100%'}} alt={nextProduct.title} />
-                            </a>
-                            <ProductBadge product={nextProduct} />
-                          </div>
-                          <h2>{nextProduct.title}</h2>
-                          {nextRetiringMessage && <p><b>{nextRetiringMessage}</b></p>}
-                          <p>{nextProduct.homeSummary}</p>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="w3-half w3-container">
-                        {/* Empty space for odd number of products */}
-                      </div>
-                    )}
-                  </div>
-                )
-              }
-              return acc
-            }, [])}
-
-            {/* Show "Coming Soon" placeholders for New Arrivals category */}
-            {category === 'new-arrivals' && (
-              <div className="w3-row w3-container" style={{margin: '50px 0'}}>
-                <div className="w3-half w3-container">
-                  <div className="w3-topbar w3-border-orange">
-                    <div className="filter-blur">
-                      <img src="/images/3d-791205_640_pixabay.jpg" style={{width: '100%'}} alt="New Arrivals Coming Soon" />
-                    </div>
-                    <h2>New Arrivals</h2>
-                    <p>New printing in progress! We are committed to bringing you new, exciting products. If you are interested in being notified as soon as a product is released, join our social media platforms (Instagram, Discord server, YouTube) to stay updated on our latest releases.</p>
-                  </div>
-                </div>
-
-              </div>
-            )}
-          </div>
-        )
-      })}
+      {/* Render products grouped by categories with horizontal scrolling */}
+      <div style={{ padding: '32px 16px' }}>
+        {categoryOrder.map((category) => {
+          const products = groupedProducts[category]
+          
+          // Skip empty categories
+          if (products.length === 0) return null
+          
+          return (
+            <CategorySection 
+              key={category}
+              categoryName={getCategoryDisplayName(category)}
+              products={products}
+            />
+          )
+        })}
+      </div>
 
       <div className="bgimg-2 w3-display-container w3-opacity-min" id="home">
         <div className="w3-display-middle" style={{whiteSpace: 'nowrap'}}>
