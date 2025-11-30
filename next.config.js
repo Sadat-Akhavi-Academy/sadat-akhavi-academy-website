@@ -5,7 +5,6 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  // Disable server-side rendering for static export
   reactStrictMode: true,
 }
 

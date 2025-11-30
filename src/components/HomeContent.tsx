@@ -341,7 +341,7 @@ export default function HomeContent() {
                   <i className="fa fa-cog fa-spin" style={{ fontSize: '48px', color: '#f44336', marginBottom: '16px' }}></i>
                   <h4 style={{ marginBottom: '8px', fontWeight: 'bold' }}>Exciting New Products in Development</h4>
                   <p className="w3-text-grey" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-                    We're working on amazing new robotics kits and educational projects! 
+                    We&apos;re working on amazing new robotics kits and educational projects! 
                     Stay tuned for innovative products that will take your STEM learning to the next level.
                   </p>
                 </div>
