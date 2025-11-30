@@ -399,6 +399,46 @@ export default function HomeContent() {
         </div>
       </div>
 
+      {/* Classes & Scholarships Coming Soon Modal */}
+      <div id="classes-scholarships-modal" className="w3-modal" style={{ display: 'none' }}>
+        <div className="w3-modal-content w3-animate-zoom" style={{ maxWidth: '600px' }}>
+          <div className="w3-container" style={{ padding: '32px' }}>
+            <span 
+              onClick={() => {
+                const modal = document.getElementById('classes-scholarships-modal')
+                if (modal) modal.style.display = 'none'
+              }}
+              className="w3-button w3-display-topright w3-hover-red"
+              style={{ fontSize: '24px', padding: '8px 16px' }}
+            >
+              &times;
+            </span>
+            <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+              <i className="fa fa-rocket" style={{ fontSize: '48px', color: '#f44336', marginBottom: '16px' }}></i>
+              <h3 style={{ margin: '0 0 8px 0', fontWeight: 'bold' }} id="cs-modal-title">Coming Soon</h3>
+              <p style={{ fontSize: '18px', color: '#ff9800', fontWeight: 'bold', margin: '8px 0' }}>
+                <i className="fa fa-clock-o w3-margin-right"></i>Available Soon - Stay Tuned!
+              </p>
+            </div>
+            <p id="cs-modal-description" style={{ fontSize: '16px', lineHeight: '1.6', color: '#555', textAlign: 'center', marginBottom: '24px' }}>
+              Description will appear here
+            </p>
+            <div style={{ textAlign: 'center', marginTop: '24px' }}>
+              <button 
+                onClick={() => {
+                  const modal = document.getElementById('classes-scholarships-modal')
+                  if (modal) modal.style.display = 'none'
+                }}
+                className="w3-button w3-black w3-hover-grey"
+                style={{ padding: '12px 32px', fontSize: '16px' }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Render products grouped by categories with horizontal scrolling */}
       <div style={{ padding: '32px 16px' }}>
         {categoryOrder.map((category) => {
@@ -440,15 +480,23 @@ export default function HomeContent() {
                     Join our hands-on workshops and classes to learn electronics, robotics, and programming. 
                     Perfect for beginners and enthusiasts alike!
                   </p>
-                  <a 
-                    href="https://sadat-akhavi-academy.eventbrite.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                  <button 
+                    onClick={() => {
+                      const modal = document.getElementById('classes-scholarships-modal')
+                      const modalTitle = document.getElementById('cs-modal-title')
+                      const modalDescription = document.getElementById('cs-modal-description')
+                      
+                      if (modal && modalTitle && modalDescription) {
+                        modalTitle.textContent = 'Workshops & Classes'
+                        modalDescription.textContent = 'Exciting workshops and classes are coming soon! Stay tuned for hands-on learning experiences in electronics, robotics, and programming.'
+                        modal.style.display = 'block'
+                      }
+                    }}
                     className="w3-button w3-blue w3-hover-indigo"
-                    style={{ padding: '12px 32px', fontSize: '16px' }}
+                    style={{ padding: '12px 32px', fontSize: '16px', cursor: 'pointer' }}
                   >
-                    <i className="fa fa-external-link w3-margin-right"></i>View Classes
-                  </a>
+                    <i className="fa fa-clock-o w3-margin-right"></i>Coming Soon
+                  </button>
                 </div>
               </div>
             </div>
@@ -468,13 +516,23 @@ export default function HomeContent() {
                     We offer scholarships to support passionate learners. 
                     Apply now to get access to our courses and kits at reduced or no cost!
                   </p>
-                  <a 
-                    href="#contact" 
+                  <button 
+                    onClick={() => {
+                      const modal = document.getElementById('classes-scholarships-modal')
+                      const modalTitle = document.getElementById('cs-modal-title')
+                      const modalDescription = document.getElementById('cs-modal-description')
+                      
+                      if (modal && modalTitle && modalDescription) {
+                        modalTitle.textContent = 'Scholarships'
+                        modalDescription.textContent = 'Our scholarship program will be launching soon! We&apos;re committed to making STEM education accessible. Stay tuned for application details.'
+                        modal.style.display = 'block'
+                      }
+                    }}
                     className="w3-button w3-green w3-hover-teal"
-                    style={{ padding: '12px 32px', fontSize: '16px' }}
+                    style={{ padding: '12px 32px', fontSize: '16px', cursor: 'pointer' }}
                   >
-                    <i className="fa fa-envelope w3-margin-right"></i>Apply Now
-                  </a>
+                    <i className="fa fa-clock-o w3-margin-right"></i>Coming Soon
+                  </button>
                 </div>
               </div>
             </div>

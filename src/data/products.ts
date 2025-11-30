@@ -340,7 +340,7 @@ export const products: ProductData[] = [
     isHot: true,
     isAvailableSoon: true,
     
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 1 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 1 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -371,7 +371,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isAvailableSoon: true,
     
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 2 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 2 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -404,7 +404,7 @@ export const products: ProductData[] = [
     // isLowStock: true,
     isAvailableSoon: true,
 
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 3 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 3 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -432,7 +432,7 @@ export const products: ProductData[] = [
     title: 'Dream Beam',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 4 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 4 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -463,7 +463,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isAvailableSoon: true,
     
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 5 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 5 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -491,7 +491,7 @@ export const products: ProductData[] = [
     title: 'FarmForce 3000',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 6 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 6 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -519,7 +519,7 @@ export const products: ProductData[] = [
     title: 'Ding Works (Fortress Sentinel Security)',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 7 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 7 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -547,7 +547,7 @@ export const products: ProductData[] = [
     title: 'Ding Works Pro (Fortress Sentinel Security)',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 8 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 8 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -575,7 +575,7 @@ export const products: ProductData[] = [
     title: 'Home Security System - Fortress Sentinel Security',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 9 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 9 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -603,7 +603,7 @@ export const products: ProductData[] = [
     title: 'ForkForce 2000',
     status: 'active',
     isAvailableSoon: true,
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 10 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 10 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -634,7 +634,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isAvailableSoon: true,
     
-    categories: [ 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 11 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 11 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
@@ -763,7 +763,7 @@ export const products: ProductData[] = [
     isClass: true,
     isAvailableSoon: true,
     
-    categories: ['scholarships', 'training-packages'],
+    categories: ['scholarships'],
     metaTitle: 'School Break Robotics Workshop | Sadat Akhavi Academy',
     metaDescription: 'Join our schoolbreak robotics workshop for hands-on learning. Build, code, and explore robotics in a collaborative environment.',
     metaKeywords: 'robotics workshop, schoolbreak class, hands-on learning, STEM workshop, beginner robotics',

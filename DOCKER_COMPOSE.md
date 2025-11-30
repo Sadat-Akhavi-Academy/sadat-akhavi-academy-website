@@ -5,7 +5,7 @@
 ### Start Development Server
 
 ```bash
-docker-compose up dev
+docker compose up dev
 ```
 
 Your site will be available at: **http://localhost:3000**
@@ -19,7 +19,7 @@ The development server includes:
 ### Stop Development Server
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
@@ -28,12 +28,12 @@ docker-compose down
 
 | Command | Description |
 |---------|-------------|
-| `docker-compose up dev` | Start dev server (foreground) |
-| `docker-compose up -d dev` | Start dev server (background) |
-| `docker-compose logs -f dev` | View logs |
-| `docker-compose restart dev` | Restart dev server |
-| `docker-compose down` | Stop all services |
-| `docker-compose up --build dev` | Rebuild and start |
+| `docker compose up dev` | Start dev server (foreground) |
+| `docker compose up -d dev` | Start dev server (background) |
+| `docker compose logs -f dev` | View logs |
+| `docker compose restart dev` | Restart dev server |
+| `docker compose down` | Stop all services |
+| `docker compose up --build dev` | Rebuild and start |
 
 ---
 
@@ -42,7 +42,7 @@ docker-compose down
 ### 1. Development Service (default)
 
 ```bash
-docker-compose up dev
+docker compose up dev
 ```
 
 - **Port**: 3000
@@ -53,7 +53,7 @@ docker-compose up dev
 ### 2. Production Service (testing)
 
 ```bash
-docker-compose --profile production up prod
+docker compose --profile production up prod
 ```
 
 - **Port**: 8080
@@ -68,14 +68,14 @@ docker-compose --profile production up prod
 
 ```bash
 # Build and start development container
-docker-compose up --build dev
+docker compose up --build dev
 ```
 
 ### 2. Daily Development
 
 ```bash
 # Start dev server (already built)
-docker-compose up dev
+docker compose up dev
 ```
 
 Edit files in your editor - changes appear automatically!
@@ -84,7 +84,7 @@ Edit files in your editor - changes appear automatically!
 
 ```bash
 # Build and test production version
-docker-compose --profile production up --build prod
+docker compose --profile production up --build prod
 
 # Visit http://localhost:8080
 ```
@@ -93,13 +93,13 @@ docker-compose --profile production up --build prod
 
 ```bash
 # Stop containers
-docker-compose down
+docker compose down
 
 # Remove volumes (clean slate)
-docker-compose down -v
+docker compose down -v
 
 # Remove images
-docker-compose down --rmi all
+docker compose down --rmi all
 ```
 
 ---
@@ -128,27 +128,27 @@ This means:
 
 ```bash
 # Check logs
-docker-compose logs dev
+docker compose logs dev
 
 # Rebuild from scratch
-docker-compose build --no-cache dev
-docker-compose up dev
+docker compose build --no-cache dev
+docker compose up dev
 ```
 
 ### Hot reload not working
 
 ```bash
 # Stop and restart
-docker-compose restart dev
+docker compose restart dev
 
 # Or use polling (slower but more reliable)
-# Already enabled in docker-compose.yml with CHOKIDAR_USEPOLLING=true
+# Already enabled in docker compose.yml with CHOKIDAR_USEPOLLING=true
 ```
 
 ### Port already in use
 
 ```bash
-# Change port in docker-compose.yml
+# Change port in docker compose.yml
 ports:
   - "3001:3000"  # Use port 3001 instead
 ```
@@ -164,8 +164,8 @@ sudo chown -R $USER:$USER .
 
 ```bash
 # Rebuild with clean install
-docker-compose down -v
-docker-compose up --build dev
+docker compose down -v
+docker compose up --build dev
 ```
 
 ---
@@ -176,20 +176,20 @@ docker-compose up --build dev
 
 ```bash
 # Install new package
-docker-compose exec dev npm install package-name
+docker compose exec dev npm install package-name
 
 # Run linter
-docker-compose exec dev npm run lint
+docker compose exec dev npm run lint
 
 # Run build
-docker-compose exec dev npm run build
+docker compose exec dev npm run build
 ```
 
 ### Shell access
 
 ```bash
 # Access container shell
-docker-compose exec dev sh
+docker compose exec dev sh
 
 # Now you can run any command
 npm install
@@ -201,10 +201,10 @@ exit
 
 ```bash
 # Follow logs
-docker-compose logs -f dev
+docker compose logs -f dev
 
 # View last 100 lines
-docker-compose logs --tail=100 dev
+docker compose logs --tail=100 dev
 ```
 
 ---
@@ -215,12 +215,12 @@ Before deploying to production, test the build:
 
 ```bash
 # Build and run production version
-docker-compose --profile production up --build prod
+docker compose --profile production up --build prod
 
 # Test at http://localhost:8080
 
 # Stop when done
-docker-compose --profile production down
+docker compose --profile production down
 ```
 
 ---
@@ -229,29 +229,29 @@ docker-compose --profile production down
 
 ### Making changes
 
-1. Start dev server: `docker-compose up dev`
+1. Start dev server: `docker compose up dev`
 2. Edit files in your editor
 3. See changes at http://localhost:3000
-4. Stop when done: `Ctrl+C` or `docker-compose down`
+4. Stop when done: `Ctrl+C` or `docker compose down`
 
 ### Adding dependencies
 
 ```bash
 # Install new package
-docker-compose exec dev npm install package-name
+docker compose exec dev npm install package-name
 
 # Or rebuild container
-docker-compose up --build dev
+docker compose up --build dev
 ```
 
 ### Switching between dev and prod
 
 ```bash
 # Development
-docker-compose up dev
+docker compose up dev
 
 # Production (in another terminal)
-docker-compose --profile production up prod
+docker compose --profile production up prod
 ```
 
 Both can run simultaneously on different ports!
@@ -273,7 +273,7 @@ Both can run simultaneously on different ports!
 
 ## 🔐 Environment Variables
 
-Add environment variables in `docker-compose.yml`:
+Add environment variables in `docker compose.yml`:
 
 ```yaml
 services:
@@ -298,7 +298,7 @@ echo "NEXT_PUBLIC_API_URL=http://localhost:3000" > .env
 ```bash
 # 1. First time setup
 cd /home/administrator/projects/sadat-akhavi-academy-website
-docker-compose up --build dev
+docker compose up --build dev
 
 # 2. Access in browser
 # http://localhost:3000
@@ -308,11 +308,11 @@ docker-compose up --build dev
 
 # 4. Test production build
 # In another terminal:
-docker-compose --profile production up --build prod
+docker compose --profile production up --build prod
 # Visit http://localhost:8080
 
 # 5. Clean up
-docker-compose down
+docker compose down
 ```
 
 ---
@@ -323,15 +323,15 @@ docker-compose down
 
 ```bash
 # Nuclear option - clean everything
-docker-compose down -v --rmi all
-docker-compose up --build dev
+docker compose down -v --rmi all
+docker compose up --build dev
 ```
 
 ### Check status
 
 ```bash
 # List running containers
-docker-compose ps
+docker compose ps
 
 # Check resources
 docker stats
@@ -342,7 +342,7 @@ docker stats
 ## 📝 Notes
 
 - Development server runs with `npm run dev`
-- Changes to `package.json` require rebuild: `docker-compose up --build dev`
+- Changes to `package.json` require rebuild: `docker compose up --build dev`
 - TypeScript errors show in terminal
 - Hot reload works for most changes
 - Production profile is optional (for testing)
@@ -352,6 +352,6 @@ docker stats
 **Happy coding! 🚀**
 
 For more information:
-- Development setup: Run `docker-compose up dev`
-- Production testing: Run `docker-compose --profile production up prod`
-- Logs: Run `docker-compose logs -f dev`
+- Development setup: Run `docker compose up dev`
+- Production testing: Run `docker compose --profile production up prod`
+- Logs: Run `docker compose logs -f dev`
