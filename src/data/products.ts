@@ -25,6 +25,9 @@ export interface ProductData {
   isLowStock?: boolean            // Badge: Low stock warning
   isOnSale?: boolean              // Badge: On sale/discounted
   isSpecial?: boolean             // Badge: Special edition/featured
+  isAvailableSoon?: boolean       // Badge: Available Soon / Coming Soon
+  isClass?: boolean               // Badge: Workshop/Class offering
+  isScholarship?: boolean         // Badge: Scholarship available
   
   // Homepage Display Categories
   categories: Array<
@@ -92,9 +95,10 @@ export const products: ProductData[] = [
     status: 'active',
     
     // Product Flags/Badges
-    isSpecial: true,
+    // isSpecial: true,
+    isSoldOut: true,  
     
-    categories: ['new-arrivals', 'packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    categories: ['packaged-kits'],
     metaTitle: 'Alpha Bike X+ - Advanced RC Bike Kit | Sadat Akhavi Academy',
     metaDescription: 'Build the advanced Alpha Bike X+ - a feature-rich remote-controlled bike for learning electronics, robotics, ESP32 programming, and advanced mechatronics.',
     metaKeywords: 'Alpha Bike X Plus, advanced robotics kit, RC bike, electronics project, ESP32, STEM education, 3D printing, mechatronics',
@@ -130,7 +134,8 @@ export const products: ProductData[] = [
     slug: 'turbo_thumb_plus',
     title: 'Turbo Thumb+',
     status: 'active',
-    categories: ['new-arrivals', 'packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    isSoldOut: true, 
+    categories: ['packaged-kits'],
     metaTitle: 'Turbo Thumb+ - Universal RC Controller Kit | Sadat Akhavi Academy',
     metaDescription: 'Build your own Turbo Thumb+ - a modular universal controller for all your RC devices. Learn electronics, ESP32 programming, and wireless communication.',
     metaKeywords: 'Turbo Thumb Plus, RC controller, DIY controller, ESP32, wireless control, robotics, electronics kit',
@@ -166,7 +171,8 @@ export const products: ProductData[] = [
     slug: 'alpha_bike_j',
     title: 'Alpha Bike J',
     status: 'active',
-    categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    isRetired: true,
+    categories: ['packaged-kits'],
     metaTitle: 'Alpha Bike J - DIY RC Bike Robotics Kit | Sadat Akhavi Academy',
     metaDescription: 'Build your own Alpha Bike J - a beginner-friendly remote-controlled bike perfect for learning electronics, robotics, 3D printing, and ESP32 programming. Features partially pre-soldered PCB for easy assembly.',
     metaKeywords: 'Alpha Bike J, DIY robotics kit, RC bike, electronics kit for beginners, ESP32 robotics project, STEM learning kit, 3D printing project, Arduino bike, robotics education, soldering practice, mechatronics kit',
@@ -219,7 +225,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isRetired: true,
     
-    categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    categories: ['packaged-kits'],
     metaTitle: 'Alpha Bike X - RC Bike Kit | Sadat Akhavi Academy',
     metaDescription: 'Build your own Alpha Bike X - a remote-controlled bike for learning electronics, robotics, and ESP32 programming. Now retiring - check out the new Alpha Bike X+!',
     metaKeywords: 'Alpha Bike X, robotics kit, RC bike, electronics project, ESP32, STEM education',
@@ -258,7 +264,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isRetired: true,
     
-    categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    categories: ['packaged-kits'],
     metaTitle: 'Turbo Thumb - RC Controller Kit | Sadat Akhavi Academy',
     metaDescription: 'Build the Turbo Thumb - a modular universal controller for RC devices. Now retiring - check out the new Turbo Thumb+!',
     metaKeywords: 'Turbo Thumb, RC controller, DIY controller, ESP32, wireless control, robotics',
@@ -293,7 +299,8 @@ export const products: ProductData[] = [
     slug: 'clockometer',
     title: 'Clockometer',
     status: 'active',
-    categories: ['packaged-kits', 'electronics-kits', 'mechanical-structural-kits'],
+    isRetired: true,
+    categories: ['packaged-kits'],
     metaTitle: 'Clockometer - Revolutionary Time Experience | Sadat Akhavi Academy',
     metaDescription: 'Build the Clockometer - a revolutionary timepiece that brings time to life! Perfect for young car lovers and electronics enthusiasts.',
     metaKeywords: 'Clockometer, DIY clock, electronics project, ESP32 clock, STEM education, unique timepiece',
@@ -325,21 +332,22 @@ export const products: ProductData[] = [
     // Mechanical Kit 1
     productCode: 'SAA-MCH-001',
     slug: 'mechanical_kit_1',
-    title: 'Mechanical Kit 1',
+    title: 'Deep Space Command Center',
     status: 'active',
     
     // Product Flags/Badges
     isNewArrival: true,
     isHot: true,
+    isAvailableSoon: true,
     
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 1 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 1 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5499.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5499_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_1',
-    mainImage: '/images/newArrival/IMG_5499.jpg',
-    gallery: ['/images/newArrival/IMG_5499.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5499_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5499_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -357,16 +365,20 @@ export const products: ProductData[] = [
     // Mechanical Kit 2
     productCode: 'SAA-MCH-002',
     slug: 'mechanical_kit_2',
-    title: 'Mechanical Kit 2',
+    title: 'Star Ocean Lighthouse',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    
+    // Product Flags/Badges
+    isAvailableSoon: true,
+    
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 2 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 2 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5506_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5506_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_2',
-    mainImage: '/images/newArrival/IMG_5506_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5506_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5506_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5506_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -384,21 +396,22 @@ export const products: ProductData[] = [
     // Mechanical Kit 3
     productCode: 'SAA-MCH-003',
     slug: 'mechanical_kit_3',
-    title: 'Mechanical Kit 3',
+    title: 'Farm Force 2000',
     status: 'active',
     
     // Product Flags/Badges
-    isOnSale: true,
-    isLowStock: true,
-    
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    // isOnSale: true,
+    // isLowStock: true,
+    isAvailableSoon: true,
+
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 3 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 3 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5513_mod_01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5513_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_3',
-    mainImage: '/images/newArrival/IMG_5513_mod_01.jpg',
-    gallery: ['/images/newArrival/IMG_5513_mod_01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5513_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -416,16 +429,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 4
     productCode: 'SAA-MCH-004',
     slug: 'mechanical_kit_4',
-    title: 'Mechanical Kit 4',
+    title: 'Dream Beam',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 4 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 4 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5523_mod_01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5523_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_4',
-    mainImage: '/images/newArrival/IMG_5523_mod_01.jpg',
-    gallery: ['/images/newArrival/IMG_5523_mod_01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5523_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5523_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -443,16 +457,20 @@ export const products: ProductData[] = [
     // Mechanical Kit 5
     productCode: 'SAA-MCH-005',
     slug: 'mechanical_kit_5',
-    title: 'Mechanical Kit 5',
+    title: 'Torch X',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    
+    // Product Flags/Badges
+    isAvailableSoon: true,
+    
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 5 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 5 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5525_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5525_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_5',
-    mainImage: '/images/newArrival/IMG_5525_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5525_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5525_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5525_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -470,16 +488,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 6
     productCode: 'SAA-MCH-006',
     slug: 'mechanical_kit_6',
-    title: 'Mechanical Kit 6',
+    title: 'FarmForce 3000',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 6 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 6 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5542_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5542_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_6',
-    mainImage: '/images/newArrival/IMG_5542_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5542_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5542_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5542_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -497,16 +516,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 7
     productCode: 'SAA-MCH-007',
     slug: 'mechanical_kit_7',
-    title: 'Mechanical Kit 7',
+    title: 'Ding Works (Fortress Sentinel Security)',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 7 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 7 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5553_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5553_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_7',
-    mainImage: '/images/newArrival/IMG_5553_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5553_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5553_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5553_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -524,16 +544,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 8
     productCode: 'SAA-MCH-008',
     slug: 'mechanical_kit_8',
-    title: 'Mechanical Kit 8',
+    title: 'Ding Works Pro (Fortress Sentinel Security)',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 8 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 8 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5559_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5559_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_8',
-    mainImage: '/images/newArrival/IMG_5559_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5559_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5559_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5559_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -551,16 +572,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 9
     productCode: 'SAA-MCH-009',
     slug: 'mechanical_kit_9',
-    title: 'Mechanical Kit 9',
+    title: 'Home Security System - Fortress Sentinel Security',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 9 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 9 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5563_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5563_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_9',
-    mainImage: '/images/newArrival/IMG_5563_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5563_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5563_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5563_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -578,16 +600,17 @@ export const products: ProductData[] = [
     // Mechanical Kit 10
     productCode: 'SAA-MCH-010',
     slug: 'mechanical_kit_10',
-    title: 'Mechanical Kit 10',
+    title: 'ForkForce 2000',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    isAvailableSoon: true,
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 10 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 10 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5565_mod01.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5565_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_10',
-    mainImage: '/images/newArrival/IMG_5565_mod01.jpg',
-    gallery: ['/images/newArrival/IMG_5565_mod01.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5565_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5565_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -605,16 +628,20 @@ export const products: ProductData[] = [
     // Mechanical Kit 11
     productCode: 'SAA-MCH-011',
     slug: 'mechanical_kit_11',
-    title: 'Mechanical Kit 11',
+    title: 'IronGrip Arm',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
+    
+    // Product Flags/Badges
+    isAvailableSoon: true,
+    
+    categories: [ 'mechanical-structural-kits'],
     metaTitle: 'Mechanical Kit 11 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 11 - precision 3D printed parts for structural and mechanical projects.',
     metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5573_mod4.jpg',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5573_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_11',
-    mainImage: '/images/newArrival/IMG_5573_mod4.jpg',
-    gallery: ['/images/newArrival/IMG_5573_mod4.jpg'],
+    mainImage: '/images/newArrival/02/IMG_5573_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5573_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -628,30 +655,320 @@ export const products: ProductData[] = [
     ],
     relatedKits: []
   },
+
   {
-    // Mechanical Kit 12
-    productCode: 'SAA-MCH-012',
-    slug: 'mechanical_kit_12',
-    title: 'Mechanical Kit 12',
+    // Aero Dreamer - Advanced Flight Mechanics Kit
+    productCode: 'SAA-MCH-013',
+    slug: 'aero_dreamer',
+    title: 'Aero Dreamer',
     status: 'active',
-    categories: ['new-arrivals', 'mechanical-structural-kits'],
-    metaTitle: 'Mechanical Kit 12 - 3D Printed Structural Kit | Sadat Akhavi Academy',
-    metaDescription: 'Build with our Mechanical Kit 12 - precision 3D printed parts for structural and mechanical projects.',
-    metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/IMG_5577_mode3.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_12',
-    mainImage: '/images/newArrival/IMG_5577_mode3.jpg',
-    gallery: ['/images/newArrival/IMG_5577_mode3.jpg'],
+    
+    // Product Flags/Badges
+    // isNewArrival: true,
+    // isHot: true,
+    isAvailableSoon: true,
+    
+    categories: ['mechanical-structural-kits'],
+    metaTitle: 'Aero Dreamer - Advanced Flight Mechanics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Build the Aero Dreamer - an advanced aerodynamics and flight mechanics kit. Learn about lift, thrust, and aerospace engineering.',
+    metaKeywords: 'Aero Dreamer, flight mechanics, aerodynamics kit, aerospace engineering, STEM education, mechanical kit',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/03/IMG_5593.jpg',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/aero_dreamer',
+    mainImage: '/images/newArrival/03/IMG_5593.jpg',
+    gallery: ['/images/newArrival/03/IMG_5593.jpg'],
     description: [
-      "High-quality 3D printed mechanical components for your next project.",
-      "Learn mechanical design, assembly, and structural engineering principles.",
-      "Perfect for building custom mechanisms and structural prototypes."
+      "Soar into the world of aerodynamics with Aero Dreamer!",
+      "This advanced mechanical kit teaches the principles of flight, lift, thrust, and aerospace engineering.",
+      "Perfect for aspiring engineers and aviation enthusiasts ready to explore the science of flight."
     ],
-    homeSummary: "High-quality 3D printed mechanical components for your next project. Perfect for learning mechanical design and structural engineering.",
+    homeSummary: "Soar into aerodynamics! Learn flight principles, lift, and thrust with this advanced aerospace engineering kit.",
     introVideoId: 'qB5FXVPfYr4',
     skills: [
       { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' }
+    ],
+    relatedKits: []
+  },
+  // {
+  //   // Training Package 1 - Robotics Fundamentals
+  //   productCode: 'SAA-TRN-001',
+  //   slug: 'robotics_fundamentals_package',
+  //   title: 'Robotics Fundamentals Training Package',
+  //   status: 'active',
+  //   categories: ['training-packages'],
+  //   metaTitle: 'Robotics Fundamentals Training Package | Sadat Akhavi Academy',
+  //   metaDescription: 'Comprehensive training package covering robotics fundamentals, electronics, and programming. Includes hands-on projects and expert guidance.',
+  //   metaKeywords: 'robotics training, STEM education, electronics course, programming course, hands-on learning',
+  //   ogImage: 'https://sadat-akhavi-academy.com/images/slides/IMG_5239.JPG',
+  //   ogUrl: 'https://sadat-akhavi-academy.com/products/robotics_fundamentals_package',
+  //   mainImage: '/images/slides/IMG_5239.JPG',
+  //   gallery: ['/images/slides/IMG_5239.JPG', '/images/slides/IMG_5255.JPG'],
+  //   description: [
+  //     "Master the fundamentals of robotics with our comprehensive training package.",
+  //     "This package includes structured lessons, hands-on projects, and expert mentorship to guide you through electronics, programming, and mechanical design.",
+  //     "Perfect for beginners and intermediate learners looking to build a strong foundation in STEM."
+  //   ],
+  //   homeSummary: "Master robotics fundamentals with structured lessons, hands-on projects, and expert mentorship. Perfect for beginners building a strong STEM foundation.",
+  //   introVideoId: 'qB5FXVPfYr4',
+  //   skills: [
+  //     { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
+  //     { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+  //     { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+  //   ],
+  //   relatedKits: [
+  //     { productCode: 'SAA-ABJ-001' },
+  //     { productCode: 'SAA-TTH-002' }
+  //   ]
+  // },
+  // {
+  //   // Training Package 2 - Advanced Mechatronics
+  //   productCode: 'SAA-TRN-002',
+  //   slug: 'advanced_mechatronics_package',
+  //   title: 'Advanced Mechatronics Training Package',
+  //   status: 'active',
+  //   categories: ['training-packages'],
+  //   metaTitle: 'Advanced Mechatronics Training Package | Sadat Akhavi Academy',
+  //   metaDescription: 'Take your skills to the next level with advanced mechatronics training. Includes complex projects and professional-grade challenges.',
+  //   metaKeywords: 'mechatronics training, advanced robotics, engineering course, professional training, STEM',
+  //   ogImage: 'https://sadat-akhavi-academy.com/images/slides/IMG_5255.JPG',
+  //   ogUrl: 'https://sadat-akhavi-academy.com/products/advanced_mechatronics_package',
+  //   mainImage: '/images/slides/IMG_5255.JPG',
+  //   gallery: ['/images/slides/IMG_5255.JPG', '/images/slides/IMG_5239.JPG'],
+  //   description: [
+  //     "Elevate your engineering skills with our advanced mechatronics training package.",
+  //     "Tackle complex projects combining mechanical design, electronics, and advanced programming.",
+  //     "Ideal for students ready to take on professional-grade challenges and real-world applications."
+  //   ],
+  //   homeSummary: "Elevate your skills with advanced mechatronics training. Tackle complex projects combining mechanical design, electronics, and advanced programming.",
+  //   introVideoId: 'qB5FXVPfYr4',
+  //   skills: [
+  //     { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
+  //     { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+  //     { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
+  //     { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+  //   ],
+  //   relatedKits: [
+  //     { productCode: 'SAA-ABX-002' },
+  //     { productCode: 'SAA-TTH-002' }
+  //   ]
+  // },
+  {
+    // Class 1 - School Break Robotics Workshop
+    productCode: 'SAA-CLS-001',
+    slug: 'school_break_robotics_workshop',
+    title: 'School Break Robotics Workshop',
+    status: 'active',
+    
+    // Product Flags/Badges
+    isClass: true,
+    isAvailableSoon: true,
+    
+    categories: ['scholarships', 'training-packages'],
+    metaTitle: 'School Break Robotics Workshop | Sadat Akhavi Academy',
+    metaDescription: 'Join our schoolbreak robotics workshop for hands-on learning. Build, code, and explore robotics in a collaborative environment.',
+    metaKeywords: 'robotics workshop, schoolbreak class, hands-on learning, STEM workshop, beginner robotics',
+    ogImage: 'https://sadat-akhavi-academy.com/images/scholarshipsNclasses/robot-7720802_640.jpg',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/school_break_robotics_workshop',
+    mainImage: '/images/scholarshipsNclasses/robot-7720802_640.jpg',
+    gallery: ['/images/scholarshipsNclasses/robot-7720802_640.jpg', '/images/scholarshipsNclasses/tool-2766836_640.jpg'],
+    description: [
+      "Join us for an exciting schoolbreak of robotics exploration!",
+      "Our hands-on workshop guides you through building and programming your own robotic projects.",
+      "Perfect for beginners and enthusiasts. All materials included. Register on Eventbrite!"
+    ],
+    homeSummary: "Join our schoolbreak robotics workshop for hands-on learning. Build, code, and explore robotics in a collaborative environment with expert instructors.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: [
+      { productCode: 'SAA-ABJ-001' }
+    ]
+  },
+  {
+    // Class 2 - Electronics for Beginners
+    productCode: 'SAA-CLS-002',
+    slug: 'electronics_beginners_class',
+    title: 'Electronics for Beginners Class',
+    status: 'active',
+    
+    // Product Flags/Badges
+    isClass: true,
+    isAvailableSoon: true,
+    
+    categories: ['scholarships'],
+    metaTitle: 'Electronics for Beginners Class | Sadat Akhavi Academy',
+    metaDescription: 'Learn electronics from scratch in our beginner-friendly class. Understand circuits, components, and basic soldering.',
+    metaKeywords: 'electronics class, beginner electronics, circuit design, soldering class, STEM education',
+    ogImage: 'https://sadat-akhavi-academy.com/images/scholarshipsNclasses/soldering-1038517_640.jpg',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_beginners_class',
+    mainImage: '/images/scholarshipsNclasses/soldering-1038517_640.jpg',
+    gallery: ['/images/scholarshipsNclasses/soldering-1038517_640.jpg', '/images/scholarshipsNclasses/tool-2766836_640.jpg'],
+    description: [
+      "Start your electronics journey with our beginner-friendly class!",
+      "Learn about circuits, components, and get hands-on experience with soldering and building simple projects.",
+      "No prior experience needed. Perfect for curious minds ready to explore the world of electronics."
+    ],
+    homeSummary: "Start your electronics journey! Learn circuits, components, and soldering in a beginner-friendly class. No experience needed.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: [
+      { productCode: 'SAA-ABJ-001' },
+      { productCode: 'SAA-TTH-001' }
+    ]
+  },
+  {
+    // Scholarship 1 - STEM Excellence Scholarship
+    productCode: 'SAA-SCH-001',
+    slug: 'stem_excellence_scholarship',
+    title: 'STEM Excellence Scholarship',
+    status: 'active',
+    
+    // Product Flags/Badges
+    isScholarship: true,
+    isAvailableSoon: true,
+    
+    categories: ['scholarships'],
+    metaTitle: 'STEM Excellence Scholarship | Sadat Akhavi Academy',
+    metaDescription: 'Apply for our STEM Excellence Scholarship. Get access to courses, kits, and mentorship at reduced or no cost.',
+    metaKeywords: 'STEM scholarship, robotics scholarship, free STEM education, student support, learning opportunity',
+    ogImage: 'https://sadat-akhavi-academy.com/images/scholarshipsNclasses/diploma-9595340_640.png',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/stem_excellence_scholarship',
+    mainImage: '/images/scholarshipsNclasses/diploma-9595340_640.png',
+    gallery: ['/images/scholarshipsNclasses/diploma-9595340_640.png'],
+    description: [
+      "We believe every passionate learner deserves access to quality STEM education.",
+      "Our STEM Excellence Scholarship provides full or partial funding for courses, kits, and mentorship programs.",
+      "Apply today and take your first step toward an exciting future in science, technology, engineering, and mathematics!"
+    ],
+    homeSummary: "Get full or partial funding for courses, kits, and mentorship. We support passionate learners pursuing STEM excellence.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Scholarship 2 - Youth Innovation Grant
+    productCode: 'SAA-SCH-002',
+    slug: 'youth_innovation_grant',
+    title: 'Youth Innovation Grant',
+    status: 'active',
+    
+    // Product Flags/Badges
+    isScholarship: true,
+    isAvailableSoon: true,
+    
+    categories: ['scholarships'],
+    metaTitle: 'Youth Innovation Grant | Sadat Akhavi Academy',
+    metaDescription: 'Youth Innovation Grant for creative young minds. Funding for innovative STEM projects and ideas.',
+    metaKeywords: 'youth grant, innovation scholarship, STEM funding, student grant, project funding',
+    ogImage: 'https://sadat-akhavi-academy.com/images/scholarshipsNclasses/learning-9536177_640.png',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/youth_innovation_grant',
+    mainImage: '/images/scholarshipsNclasses/learning-9536177_640.png',
+    gallery: ['/images/scholarshipsNclasses/learning-9536177_640.png'],
+    description: [
+      "Got a brilliant idea? We want to help you bring it to life!",
+      "Our Youth Innovation Grant supports creative young minds with funding for innovative STEM projects.",
+      "Submit your project proposal and receive financial support, materials, and expert guidance to make your vision a reality."
+    ],
+    homeSummary: "Support for creative young minds! Get funding, materials, and expert guidance to bring your innovative STEM project to life.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 1 - ESP32 Development Board
+    productCode: 'SAA-ELC-001',
+    slug: 'esp32_dev_board',
+    title: 'ESP32 Development Board Kit',
+    status: 'active',
+    isSoldOut: true, 
+    categories: ['electronics-kits'],
+    metaTitle: 'ESP32 Development Board Kit | Sadat Akhavi Academy',
+    metaDescription: 'Complete ESP32 development board kit with sensors, components, and breadboard. Perfect for learning IoT and wireless programming.',
+    metaKeywords: 'ESP32 kit, development board, electronics kit, IoT learning, wireless programming, microcontroller',
+    ogImage: 'https://sadat-akhavi-academy.com/images/computer-8671934_1280.png',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/esp32_dev_board',
+    mainImage: '/images/computer-8671934_1280.png',
+    gallery: ['/images/computer-8671934_1280.png'],
+    description: [
+      "Everything you need to start programming with ESP32!",
+      "This electronics-only kit includes an ESP32 development board, breadboard, jumper wires, sensors, and essential electronic components.",
+      "Perfect for learning wireless communication, IoT projects, and microcontroller programming without mechanical assembly."
+    ],
+    homeSummary: "Complete ESP32 development kit with sensors and components. Perfect for learning IoT and wireless programming.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 2 - Arduino Starter Kit
+    productCode: 'SAA-ELC-002',
+    slug: 'arduino_starter_kit',
+    title: 'Arduino Starter Kit',
+    status: 'active',
+    isSoldOut: true, 
+    categories: ['electronics-kits'],
+    metaTitle: 'Arduino Starter Kit | Sadat Akhavi Academy',
+    metaDescription: 'Comprehensive Arduino starter kit with sensors, LEDs, motors, and components. Learn electronics and programming from scratch.',
+    metaKeywords: 'Arduino kit, starter kit, electronics learning, programming kit, STEM education',
+    ogImage: 'https://sadat-akhavi-academy.com/images/computer-8671934_1280.png',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/arduino_starter_kit',
+    mainImage: '/images/computer-8671934_1280.png',
+    gallery: ['/images/computer-8671934_1280.png'],
+    description: [
+      "Start your electronics journey with Arduino!",
+      "This comprehensive electronics kit includes Arduino board, breadboard, sensors, LEDs, resistors, and all components needed for learning.",
+      "Focus purely on electronics and coding - no mechanical assembly required!"
+    ],
+    homeSummary: "Comprehensive Arduino kit with sensors, LEDs, and components. Perfect for learning electronics and programming.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 3 - Soldering Practice Kit
+    productCode: 'SAA-ELC-003',
+    slug: 'soldering_practice_kit',
+    title: 'Soldering Practice Kit',
+    status: 'active',
+    isSoldOut: true, 
+    categories: ['electronics-kits'],
+    metaTitle: 'Soldering Practice Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn soldering with our practice kit. Includes PCBs, components, and guide for mastering this essential electronics skill.',
+    metaKeywords: 'soldering kit, electronics practice, PCB assembly, soldering tutorial, hands-on learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/computer-8671934_1280.png',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/soldering_practice_kit',
+    mainImage: '/images/computer-8671934_1280.png',
+    gallery: ['/images/computer-8671934_1280.png'],
+    description: [
+      "Master the art of soldering!",
+      "This electronics kit focuses on developing your soldering skills with practice PCBs and components.",
+      "Electronics-only kit with no mechanical parts - perfect for building circuit board assembly confidence."
+    ],
+    homeSummary: "Learn soldering with practice PCBs and components. Master essential electronics assembly skills.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
     ],
     relatedKits: []
   }
@@ -714,6 +1031,11 @@ export function getRetiringMessage(productCode: string): string | null {
   return replacement ? `Retiring Soon – Discover the New ${replacement} !` : null
 }
 
+// Helper function to get products marked as Available Soon
+export function getAvailableSoonProducts(): ProductData[] {
+  return products.filter(product => product.isAvailableSoon === true)
+}
+
 // Category type for type-safe category filtering
 export type ProductCategory = 
   | 'new-arrivals' 
@@ -744,9 +1066,9 @@ export function getProductsGroupedByCategories(): Record<ProductCategory, Produc
 export function getCategoryDisplayName(category: ProductCategory): string {
   const displayNames: Record<ProductCategory, string> = {
     'new-arrivals': 'New Arrivals',
-    'scholarships': 'Scholarships',
-    'training-packages': 'Training Packages',
-    'packaged-kits': 'Complete Kits',
+    'scholarships': 'Scholarships & Classes',
+    'training-packages': 'Self-Paced Training Packages',
+    'packaged-kits': 'Start-to-Finish Kits (Electronics + Mechanical)',
     'electronics-kits': 'Electronics Kits',
     'mechanical-structural-kits': 'Mechanical & Structural Kits'
   }

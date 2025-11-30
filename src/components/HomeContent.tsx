@@ -2,10 +2,12 @@
 
 import ClientScripts from '@/components/ClientScripts'
 import CategorySection from '@/components/CategorySection'
-import { getProductsGroupedByCategories, getCategoryDisplayName, type ProductCategory } from '@/data/products'
+import { getProductsGroupedByCategories, getCategoryDisplayName, getAvailableSoonProducts, type ProductCategory } from '@/data/products'
+import Link from 'next/link'
 
 export default function HomeContent() {
   const groupedProducts = getProductsGroupedByCategories()
+  const availableSoonProducts = getAvailableSoonProducts()
   
   // Define the order categories should appear on homepage
   const categoryOrder: ProductCategory[] = [
@@ -61,9 +63,15 @@ export default function HomeContent() {
 
       <div className="w3-top">
         <div className="w3-bar" id="myNavbar">
-          <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onClick={() => (window as any).toggleFunction()} title="Toggle Navigation Menu">
+          <button 
+            className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" 
+            onClick={() => (window as any).toggleFunction()} 
+            title="Toggle Navigation Menu"
+            type="button"
+            aria-label="Toggle navigation menu"
+          >
             <i className="fa fa-bars"></i>
-          </a>
+          </button>
           <a href="#home" className="w3-bar-item w3-button">HOME</a>
           <a href="#about" className="w3-bar-item w3-button w3-hide-small"><i className="fa fa-user"></i> ABOUT</a>
           <a href="#portfolio" className="w3-bar-item w3-button w3-hide-small"><i className="fa fa-th"></i> PORTFOLIO</a>
@@ -165,10 +173,237 @@ export default function HomeContent() {
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qB5FXVPfYr4?si=4ShPdq1L3zH6Q976" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
 
+      {/* Coming Soon Section */}
+      <div style={{ padding: '32px 16px' }}>
+        <div className="w3-container" style={{ marginBottom: '40px' }}>
+          <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16" style={{ fontSize: '32px', fontWeight: 'bold' }}>
+            <i className="fa fa-rocket w3-margin-right"></i>Available Soon
+          </h3>
+          {availableSoonProducts.length > 0 ? (
+            <div style={{ position: 'relative', padding: '0 60px', marginTop: '24px' }}>
+              {/* Left Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('available-soon-container')
+                  if (container) {
+                    container.scrollBy({ left: -300, behavior: 'smooth' })
+                    // Pause auto-scroll temporarily
+                    const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
+                    if (scrollDiv) {
+                      scrollDiv.style.animationPlayState = 'paused'
+                      setTimeout(() => {
+                        scrollDiv.style.animationPlayState = 'running'
+                      }, 2000)
+                    }
+                  }
+                }}
+                className="w3-button w3-black w3-hover-grey"
+                style={{
+                  position: 'absolute',
+                  left: '0',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  zIndex: 5,
+                  padding: '12px 16px',
+                  fontSize: '20px',
+                  opacity: 0.8
+                }}
+              >
+                &#10094;
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('available-soon-container')
+                  if (container) {
+                    container.scrollBy({ left: 300, behavior: 'smooth' })
+                    // Pause auto-scroll temporarily
+                    const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
+                    if (scrollDiv) {
+                      scrollDiv.style.animationPlayState = 'paused'
+                      setTimeout(() => {
+                        scrollDiv.style.animationPlayState = 'running'
+                      }, 2000)
+                    }
+                  }
+                }}
+                className="w3-button w3-black w3-hover-grey"
+                style={{
+                  position: 'absolute',
+                  right: '0',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  zIndex: 5,
+                  padding: '12px 16px',
+                  fontSize: '20px',
+                  opacity: 0.8
+                }}
+              >
+                &#10095;
+              </button>
+
+              <div 
+                id="available-soon-container"
+                style={{ 
+                  position: 'relative', 
+                  overflow: 'hidden',
+                  scrollBehavior: 'smooth'
+                }}
+                onMouseEnter={() => {
+                  const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
+                  if (scrollDiv) scrollDiv.style.animationPlayState = 'paused'
+                }}
+                onMouseLeave={() => {
+                  const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
+                  if (scrollDiv) scrollDiv.style.animationPlayState = 'running'
+                }}
+              >
+                <div 
+                  className="available-soon-scroll"
+                  style={{ 
+                    display: 'flex', 
+                    gap: '16px'
+                  }}
+                >
+                  {/* Double products for seamless infinite loop */}
+                  {[...availableSoonProducts, ...availableSoonProducts].map((product, idx) => (
+                    <div 
+                      key={`${product.productCode}-${idx}`} 
+                      style={{ 
+                        minWidth: '280px', 
+                        flexShrink: 0 
+                      }}
+                    >
+                      <div 
+                        onClick={() => {
+                          const modal = document.getElementById('available-soon-modal')
+                          const modalTitle = document.getElementById('modal-product-title')
+                          const modalDescription = document.getElementById('modal-product-description')
+                          const modalImage = document.getElementById('modal-product-image') as HTMLImageElement
+                          
+                          if (modal && modalTitle && modalDescription && modalImage) {
+                            modalTitle.textContent = product.title
+                            modalDescription.textContent = product.homeSummary
+                            modalImage.src = product.mainImage
+                            modalImage.alt = product.title
+                            modal.style.display = 'block'
+                          }
+                        }}
+                        style={{ textDecoration: 'none', cursor: 'pointer' }}
+                      >
+                        <div className="w3-card w3-white w3-hover-shadow" style={{ height: '100%', border: '1px solid #ddd', borderRadius: '4px' }}>
+                          <img 
+                            src={product.mainImage} 
+                            alt={product.title} 
+                            style={{ width: '100%', height: '200px', objectFit: 'cover', borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }} 
+                          />
+                          <div style={{ padding: '16px' }}>
+                            <h5 style={{ margin: '0 0 8px 0', fontWeight: 'bold', color: '#000' }}>{product.title}</h5>
+                            <p className="w3-text-grey" style={{ margin: '0 0 4px 0', fontSize: '14px' }}>
+                              <i className="fa fa-clock-o w3-margin-right"></i>Available Soon
+                            </p>
+                            <p className="w3-text-grey" style={{ margin: 0, fontSize: '12px', fontStyle: 'italic' }}>
+                              <i className="fa fa-tag w3-margin-right"></i>
+                              {product.categories.map((cat, index) => (
+                                <span key={cat}>
+                                  {getCategoryDisplayName(cat as ProductCategory)}
+                                  {index < product.categories.length - 1 ? ', ' : ''}
+                                </span>
+                              ))}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <style jsx>{`
+                  .available-soon-scroll {
+                    animation: scroll-continuous ${availableSoonProducts.length * 5}s linear infinite;
+                  }
+                  
+                  @keyframes scroll-continuous {
+                    0% {
+                      transform: translateX(0);
+                    }
+                    100% {
+                      transform: translateX(calc(-296px * ${availableSoonProducts.length}));
+                    }
+                  }
+                `}</style>
+              </div>
+            </div>
+          ) : (
+            <div className="w3-row-padding" style={{ marginTop: '24px' }}>
+              <div className="w3-col l12 m12 s12">
+                <div className="w3-card w3-white" style={{ padding: '24px', textAlign: 'center' }}>
+                  <i className="fa fa-cog fa-spin" style={{ fontSize: '48px', color: '#f44336', marginBottom: '16px' }}></i>
+                  <h4 style={{ marginBottom: '8px', fontWeight: 'bold' }}>Exciting New Products in Development</h4>
+                  <p className="w3-text-grey" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                    We're working on amazing new robotics kits and educational projects! 
+                    Stay tuned for innovative products that will take your STEM learning to the next level.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Available Soon Modal */}
+      <div id="available-soon-modal" className="w3-modal" style={{ display: 'none' }}>
+        <div className="w3-modal-content w3-animate-zoom" style={{ maxWidth: '600px' }}>
+          <div className="w3-container" style={{ padding: '32px' }}>
+            <span 
+              onClick={() => {
+                const modal = document.getElementById('available-soon-modal')
+                if (modal) modal.style.display = 'none'
+              }}
+              className="w3-button w3-display-topright w3-hover-red"
+              style={{ fontSize: '24px', padding: '8px 16px' }}
+            >
+              &times;
+            </span>
+            <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+              <i className="fa fa-rocket" style={{ fontSize: '48px', color: '#f44336', marginBottom: '16px' }}></i>
+              <h3 style={{ margin: '0 0 8px 0', fontWeight: 'bold' }} id="modal-product-title">Product Name</h3>
+              <p style={{ fontSize: '18px', color: '#ff9800', fontWeight: 'bold', margin: '8px 0' }}>
+                <i className="fa fa-clock-o w3-margin-right"></i>Available Soon - Stay Tuned!
+              </p>
+            </div>
+            <div style={{ marginBottom: '24px' }}>
+              <img 
+                id="modal-product-image"
+                src="" 
+                alt="Product" 
+                style={{ width: '100%', maxHeight: '300px', objectFit: 'contain', borderRadius: '8px' }} 
+              />
+            </div>
+            <p id="modal-product-description" style={{ fontSize: '16px', lineHeight: '1.6', color: '#555', textAlign: 'center' }}>
+              Product description will appear here
+            </p>
+            <div style={{ textAlign: 'center', marginTop: '24px' }}>
+              <button 
+                onClick={() => {
+                  const modal = document.getElementById('available-soon-modal')
+                  if (modal) modal.style.display = 'none'
+                }}
+                className="w3-button w3-black w3-hover-grey"
+                style={{ padding: '12px 32px', fontSize: '16px' }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Render products grouped by categories with horizontal scrolling */}
       <div style={{ padding: '32px 16px' }}>
         {categoryOrder.map((category) => {
-          const products = groupedProducts[category]
+          // Filter out Available Soon products from category sections
+          const products = groupedProducts[category].filter(p => !p.isAvailableSoon)
           
           // Skip empty categories
           if (products.length === 0) return null
@@ -181,6 +416,70 @@ export default function HomeContent() {
             />
           )
         })}
+      </div>
+
+      {/* Classes and Scholarships Section */}
+      <div style={{ padding: '32px 16px', backgroundColor: '#f9f9f9' }}>
+        <div className="w3-container" style={{ marginBottom: '40px' }}>
+          <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16" style={{ fontSize: '32px', fontWeight: 'bold' }}>
+            <i className="fa fa-graduation-cap w3-margin-right"></i>Classes & Scholarships
+          </h3>
+          <div className="w3-row-padding" style={{ marginTop: '24px' }}>
+            {/* Classes Card */}
+            <div className="w3-col l6 m6 s12" style={{ marginBottom: '16px' }}>
+              <div className="w3-card w3-white w3-hover-shadow" style={{ height: '100%', overflow: 'hidden' }}>
+                <img 
+                  src="/images/scholarshipsNclasses/soldering-1038517_640.jpg" 
+                  alt="Workshops & Classes" 
+                  style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+                />
+                <div style={{ padding: '32px', textAlign: 'center' }}>
+                  <i className="fa fa-calendar" style={{ fontSize: '48px', color: '#2196F3', marginBottom: '16px' }}></i>
+                  <h4 style={{ marginBottom: '16px', fontWeight: 'bold' }}>Workshops & Classes</h4>
+                  <p className="w3-text-grey" style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '24px' }}>
+                    Join our hands-on workshops and classes to learn electronics, robotics, and programming. 
+                    Perfect for beginners and enthusiasts alike!
+                  </p>
+                  <a 
+                    href="https://sadat-akhavi-academy.eventbrite.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w3-button w3-blue w3-hover-indigo"
+                    style={{ padding: '12px 32px', fontSize: '16px' }}
+                  >
+                    <i className="fa fa-external-link w3-margin-right"></i>View Classes
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Scholarships Card */}
+            <div className="w3-col l6 m6 s12" style={{ marginBottom: '16px' }}>
+              <div className="w3-card w3-white w3-hover-shadow" style={{ height: '100%', overflow: 'hidden' }}>
+                <img 
+                  src="/images/scholarshipsNclasses/diploma-9595340_640.png" 
+                  alt="Scholarships Available" 
+                  style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+                />
+                <div style={{ padding: '32px', textAlign: 'center' }}>
+                  <i className="fa fa-graduation-cap" style={{ fontSize: '48px', color: '#4CAF50', marginBottom: '16px' }}></i>
+                  <h4 style={{ marginBottom: '16px', fontWeight: 'bold' }}>Scholarships Available</h4>
+                  <p className="w3-text-grey" style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '24px' }}>
+                    We offer scholarships to support passionate learners. 
+                    Apply now to get access to our courses and kits at reduced or no cost!
+                  </p>
+                  <a 
+                    href="#contact" 
+                    className="w3-button w3-green w3-hover-teal"
+                    style={{ padding: '12px 32px', fontSize: '16px' }}
+                  >
+                    <i className="fa fa-envelope w3-margin-right"></i>Apply Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="bgimg-2 w3-display-container w3-opacity-min" id="home">
