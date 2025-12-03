@@ -48,6 +48,7 @@ export interface ProductData {
   
   // Visual Content
   mainImage: string             // Hero/featured image path
+  secondaryImage?: string       // Optional secondary image for dual-image cards (packaged-kits)
   gallery: string[]             // Array of gallery image paths
   
   // Text Content
@@ -105,6 +106,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/ABXplus.JPG',
     ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_x_plus',
     mainImage: '/images/ABXplus.JPG',
+    secondaryImage: '/images/ABXX_TT_Plus.JPG',
     gallery: [
       '/images/ABXplus.JPG',
       '/images/ABXX_TT_Plus.JPG',
@@ -117,6 +119,9 @@ export const products: ProductData[] = [
     ],
     homeSummary: "Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.",
     introVideoId: 'qB5FXVPfYr4',
+    assemblyVideoId: '0j1l4ejqRxE',
+    guideDocUrl: 'https://docs.google.com/document/d/1JyV_0Fxh9MR4hAZF93VPe1uvYpEkMN9ui7yRbf1vIJ8/edit?tab=t.0',
+    softwareUrl: 'https://gitlab.com/sadat-akhavi-academy/saa_alphabike_x_plus_esp32_rx',
     skills: [
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
@@ -142,6 +147,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/TTplus.JPG',
     ogUrl: 'https://sadat-akhavi-academy.com/products/turbo_thumb_plus',
     mainImage: '/images/TTplus.JPG',
+    secondaryImage: '/images/TT_Plus.JPG',
     gallery: [
       '/images/TTplus.JPG',
       '/images/TT_Plus.JPG',
@@ -154,6 +160,9 @@ export const products: ProductData[] = [
     ],
     homeSummary: "Make one and control All ! Turbo thumb+ is awesome, it is one controller you bulid yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.",
     introVideoId: 'qB5FXVPfYr4',
+    assemblyVideoId: 'lwVkDp6MTIU',
+    guideDocUrl: 'https://docs.google.com/document/d/1btw5Shx4ZK5CjapvPtSIvtsKdIy03YK8-V-bBjGZ0p4/edit?tab=t.0',
+    softwareUrl: 'https://gitlab.com/sadat-akhavi-academy/turbothumb_remotecontrol_atmega2560',
     skills: [
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
@@ -179,6 +188,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/alpha_bike_j_mod4.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_j',
     mainImage: '/images/alpha_bike_j_mod4.jpg',
+    secondaryImage: '/images/alphaBikeJ_gallery/alpha_bike_j_mod4_gitlab2.jpg',
     gallery: [
       '/images/alphaBikeJ_gallery/alpha_bike_j_mod4_gitlab2.jpg',
       '/images/alphaBikeJ_gallery/IMG_8263.JPG',
@@ -232,6 +242,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/alpha_bike_x.png',
     ogUrl: 'https://sadat-akhavi-academy.com/products/alpha_bike_x',
     mainImage: '/images/alpha_bike_x.png',
+    secondaryImage: '/images/alpha-dog_turbo_thumb-IMG_7717.png',
     gallery: [
       '/images/alpha_bike_x.png',
       '/images/alpha-dog_turbo_thumb-IMG_7717.png'
@@ -243,6 +254,10 @@ export const products: ProductData[] = [
     ],
     homeSummary: "Alpha isn't just a bike; it's a symbol. It's cruising in style. When you build your own Alpha, you're not just following instructions; you're crafting confidence and forging your own path.",
     introVideoId: 'qB5FXVPfYr4',
+    assemblyVideoId: 'J_5BaJhAbqY',
+    guideDocUrl: 'https://docs.google.com/document/d/16NZ2EEXBjOW6E4FJXoIUf6XLvX7GuBBrJmhEr-uUT7A/edit',
+    printingDocUrl: 'https://docs.google.com/document/d/1QJ9vB07swtCGXkvnUCHN9jXOgNbnc9WKBiyjXymlr_Y/edit',
+    softwareUrl: 'https://gitlab.com/sadat-akhavi-academy/saa_alphabike_x_esp32_rx',
     skills: [
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
@@ -271,6 +286,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/turbo-thumb-IMG_7717.png',
     ogUrl: 'https://sadat-akhavi-academy.com/products/turbo-thumb',
     mainImage: '/images/turbo-thumb-IMG_7717.png',
+    secondaryImage: '/images/alpha-dog_turbo_thumb-IMG_7717.png',
     gallery: [
       '/images/turbo-thumb-IMG_7717.png',
       '/images/alpha-dog_turbo_thumb-IMG_7717.png'
@@ -282,6 +298,10 @@ export const products: ProductData[] = [
     ],
     homeSummary: "Make one and control All ! Turbo thumb is awesome, it is one controller you build yourself and controls all your RC devices you gonna build. It is modular and you can add new features to it.",
     introVideoId: 'qB5FXVPfYr4',
+    assemblyVideoId: 'JZ72lr-Kz2I',
+    guideDocUrl: 'https://docs.google.com/document/d/1TKPMaYuBZZ5mrQcOkuHnDzfKZAyyxKbs7ovjMWcPu5s',
+    printingDocUrl: 'https://docs.google.com/document/d/1fTVMXSsgGRv2gYBbKu6A8VOsChd__GV3ZnZccXh9DWU/edit',
+    softwareUrl: 'https://gitlab.com/sadat-akhavi-academy/turbothumb_remotecontrol_atmega2560',
     skills: [
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
@@ -307,6 +327,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/clockometer_IMG_7795.png',
     ogUrl: 'https://sadat-akhavi-academy.com/products/clockometer',
     mainImage: '/images/clockometer_IMG_7795.png',
+    secondaryImage: '/images/clockometerG3_gallery/IMG_7807.JPG',
     gallery: [
       '/images/clockometer_IMG_7795.png'
     ],
@@ -317,6 +338,10 @@ export const products: ProductData[] = [
     ],
     homeSummary: "Experience time like never before - the ultimate timepiece for young car lovers! Clockometer doesn't just tell time; it brings time to life in a whole new, exciting way.",
     introVideoId: 'qB5FXVPfYr4',
+    assemblyVideoId: 'JuYHC7jJr6A',
+    guideDocUrl: 'https://docs.google.com/document/d/1uLfdIZfrJFPH76SfLtabEoz2iReD_ZSMJrcc8BYSafU/edit?usp=sharing',
+    printingDocUrl: 'https://docs.google.com/document/d/1s4qnf9yh2BnVM8dpJryEnnckrdpt9-R3QN1f_SkMAb8/edit?usp=drive_link',
+    softwareUrl: 'https://gitlab.com/sadat-akhavi-academy/clockometer_g3_esp32',
     skills: [
       { icon: '/images/flat-2126877_1280.png', name: 'Robotics' },
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
@@ -402,7 +427,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     // isOnSale: true,
     // isLowStock: true,
-    isAvailableSoon: true,
+    // isAvailableSoon: true,
 
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 3 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -461,7 +486,7 @@ export const products: ProductData[] = [
     status: 'active',
     
     // Product Flags/Badges
-    isAvailableSoon: true,
+    // isAvailableSoon: true,
     
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 5 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -666,7 +691,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     // isNewArrival: true,
     // isHot: true,
-    isAvailableSoon: true,
+    // isAvailableSoon: true,
     
     categories: ['mechanical-structural-kits'],
     metaTitle: 'Aero Dreamer - Advanced Flight Mechanics Kit | Sadat Akhavi Academy',
@@ -969,6 +994,476 @@ export const products: ProductData[] = [
     introVideoId: 'qB5FXVPfYr4',
     skills: [
       { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 4
+    productCode: 'SAA-ELC-004',
+    slug: 'electronics_kit_4',
+    title: 'Electronics Learning Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Electronics Learning Kit | Sadat Akhavi Academy',
+    metaDescription: 'Complete electronics learning kit with components and circuits. Perfect for hands-on electronics education.',
+    metaKeywords: 'electronics kit, learning kit, circuit components, STEM education, electronics practice',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5594.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_4',
+    mainImage: '/images/newArrival/04_elec/IMG_5594.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5594.JPG'],
+    description: [
+      "Dive into electronics with this comprehensive learning kit.",
+      "Packed with essential components and circuits for hands-on learning.",
+      "Perfect for students and hobbyists eager to master electronics fundamentals."
+    ],
+    homeSummary: "Complete electronics learning kit with components and circuits. Perfect for hands-on electronics education.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 5
+    productCode: 'SAA-ELC-005',
+    slug: 'electronics_kit_5',
+    title: 'Advanced Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Advanced Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Advanced electronics kit with complex circuits and components. Take your electronics skills to the next level.',
+    metaKeywords: 'advanced electronics, circuit design, electronics kit, STEM learning, technical skills',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5595.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_5',
+    mainImage: '/images/newArrival/04_elec/IMG_5595.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5595.JPG'],
+    description: [
+      "Take your electronics skills to the next level with this advanced kit.",
+      "Features complex circuits and advanced components for serious learners.",
+      "Ideal for those ready to tackle more challenging electronics projects."
+    ],
+    homeSummary: "Advanced electronics kit with complex circuits. Take your electronics skills to the next level.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 6
+    productCode: 'SAA-ELC-006',
+    slug: 'electronics_kit_6',
+    title: 'Sensor Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Sensor Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Electronics kit focused on sensors and measurement. Learn to work with various sensor types.',
+    metaKeywords: 'sensor kit, electronics sensors, measurement kit, STEM learning, sensor projects',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5596.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_6',
+    mainImage: '/images/newArrival/04_elec/IMG_5596.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5596.JPG'],
+    description: [
+      "Explore the world of sensors with this specialized electronics kit.",
+      "Learn to work with temperature, light, motion, and other sensor types.",
+      "Perfect for IoT projects and data collection applications."
+    ],
+    homeSummary: "Electronics kit focused on sensors and measurement. Learn to work with various sensor types.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 7
+    productCode: 'SAA-ELC-007',
+    slug: 'electronics_kit_7',
+    title: 'Power Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Power Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn power electronics with this specialized kit. Master voltage regulation and power management.',
+    metaKeywords: 'power electronics, voltage regulation, power management, electronics kit, STEM education',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5597.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_7',
+    mainImage: '/images/newArrival/04_elec/IMG_5597.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5597.JPG'],
+    description: [
+      "Master power electronics with this specialized learning kit.",
+      "Learn about voltage regulation, power conversion, and energy management.",
+      "Essential skills for building battery-powered and efficient electronic devices."
+    ],
+    homeSummary: "Learn power electronics with voltage regulation and power management circuits.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 8
+    productCode: 'SAA-ELC-008',
+    slug: 'electronics_kit_8',
+    title: 'LED & Display Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'LED & Display Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Electronics kit featuring LEDs and displays. Create visual projects and learn display technologies.',
+    metaKeywords: 'LED kit, display electronics, visual projects, electronics learning, STEM kit',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5598.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_8',
+    mainImage: '/images/newArrival/04_elec/IMG_5598.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5598.JPG'],
+    description: [
+      "Illuminate your electronics learning with LEDs and displays!",
+      "Create colorful visual projects and learn display technologies.",
+      "Perfect for making interactive visual feedback systems."
+    ],
+    homeSummary: "Electronics kit featuring LEDs and displays. Create visual projects and learn display technologies.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 9
+    productCode: 'SAA-ELC-009',
+    slug: 'electronics_kit_9',
+    title: 'Motor Control Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Motor Control Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn motor control circuits and electronics. Perfect for robotics and automation projects.',
+    metaKeywords: 'motor control, electronics kit, robotics electronics, automation, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5599.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_9',
+    mainImage: '/images/newArrival/04_elec/IMG_5599.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5599.JPG'],
+    description: [
+      "Master motor control electronics for robotics and automation.",
+      "Learn to control DC motors, servos, and stepper motors.",
+      "Essential for any robotics or automation project."
+    ],
+    homeSummary: "Learn motor control circuits and electronics. Perfect for robotics and automation projects.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 10
+    productCode: 'SAA-ELC-010',
+    slug: 'electronics_kit_10',
+    title: 'Communication Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Communication Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn wireless and wired communication electronics. Build communication systems and networks.',
+    metaKeywords: 'communication electronics, wireless kit, networking, electronics learning, STEM',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5600.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_10',
+    mainImage: '/images/newArrival/04_elec/IMG_5600.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5600.JPG'],
+    description: [
+      "Explore wireless and wired communication electronics.",
+      "Learn RF, Bluetooth, WiFi, and other communication protocols.",
+      "Build your own communication systems and networks."
+    ],
+    homeSummary: "Learn wireless and wired communication electronics. Build communication systems and networks.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 11
+    productCode: 'SAA-ELC-011',
+    slug: 'electronics_kit_11',
+    title: 'Audio Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Audio Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn audio electronics and sound circuits. Build amplifiers, speakers, and audio systems.',
+    metaKeywords: 'audio electronics, sound circuits, amplifier kit, audio learning, STEM electronics',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5601.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_11',
+    mainImage: '/images/newArrival/04_elec/IMG_5601.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5601.JPG'],
+    description: [
+      "Discover the world of audio electronics and sound circuits.",
+      "Learn to build amplifiers, filters, and audio systems.",
+      "Perfect for music and audio enthusiasts interested in electronics."
+    ],
+    homeSummary: "Learn audio electronics and sound circuits. Build amplifiers, speakers, and audio systems.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 12
+    productCode: 'SAA-ELC-012',
+    slug: 'electronics_kit_12',
+    title: 'Digital Logic Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Digital Logic Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn digital logic circuits and gates. Foundation for computer architecture and digital systems.',
+    metaKeywords: 'digital logic, logic gates, digital circuits, computer architecture, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5602.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_12',
+    mainImage: '/images/newArrival/04_elec/IMG_5602.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5602.JPG'],
+    description: [
+      "Master digital logic circuits and Boolean algebra.",
+      "Learn logic gates, flip-flops, and digital circuit design.",
+      "Foundation for understanding computer architecture."
+    ],
+    homeSummary: "Learn digital logic circuits and gates. Foundation for computer architecture and digital systems.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 13
+    productCode: 'SAA-ELC-013',
+    slug: 'electronics_kit_13',
+    title: 'Analog Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Analog Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn analog circuits and signal processing. Master transistors, op-amps, and analog design.',
+    metaKeywords: 'analog electronics, signal processing, transistor circuits, op-amp, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5603.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_13',
+    mainImage: '/images/newArrival/04_elec/IMG_5603.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5603.JPG'],
+    description: [
+      "Dive into analog electronics and signal processing.",
+      "Master transistors, operational amplifiers, and analog design.",
+      "Essential for understanding real-world signal manipulation."
+    ],
+    homeSummary: "Learn analog circuits and signal processing. Master transistors, op-amps, and analog design.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 14
+    productCode: 'SAA-ELC-014',
+    slug: 'electronics_kit_14',
+    title: 'Microcontroller Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Microcontroller Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Complete microcontroller kit for embedded systems. Learn programming and interfacing.',
+    metaKeywords: 'microcontroller kit, embedded systems, programming, interfacing, STEM electronics',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5604.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_14',
+    mainImage: '/images/newArrival/04_elec/IMG_5604.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5604.JPG'],
+    description: [
+      "Complete microcontroller kit for embedded systems learning.",
+      "Learn programming, interfacing, and system design.",
+      "Build smart devices and automated systems."
+    ],
+    homeSummary: "Complete microcontroller kit for embedded systems. Learn programming and interfacing.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 15
+    productCode: 'SAA-ELC-015',
+    slug: 'electronics_kit_15',
+    title: 'IoT Electronics Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'IoT Electronics Kit | Sadat Akhavi Academy',
+    metaDescription: 'Internet of Things electronics kit. Build connected devices and smart systems.',
+    metaKeywords: 'IoT kit, internet of things, connected devices, smart systems, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5605.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_15',
+    mainImage: '/images/newArrival/04_elec/IMG_5605.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5605.JPG'],
+    description: [
+      "Enter the world of Internet of Things with this comprehensive kit.",
+      "Build connected devices that communicate over the internet.",
+      "Create smart home systems and cloud-connected projects."
+    ],
+    homeSummary: "Internet of Things electronics kit. Build connected devices and smart systems.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 16
+    productCode: 'SAA-ELC-016',
+    slug: 'electronics_kit_16',
+    title: 'Robotics Electronics Foundation Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Robotics Electronics Foundation Kit | Sadat Akhavi Academy',
+    metaDescription: 'Electronics foundation for robotics. Learn circuits and components for robot building.',
+    metaKeywords: 'robotics electronics, robot circuits, electronics foundation, STEM robotics, learning kit',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5606.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_16',
+    mainImage: '/images/newArrival/04_elec/IMG_5606.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5606.JPG'],
+    description: [
+      "Build your electronics foundation for robotics projects.",
+      "Learn the circuits and components essential for robot building.",
+      "Perfect preparation for advanced robotics kits."
+    ],
+    homeSummary: "Electronics foundation for robotics. Learn circuits and components for robot building.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 17
+    productCode: 'SAA-ELC-017',
+    slug: 'electronics_kit_17',
+    title: 'Circuit Design Starter Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Circuit Design Starter Kit | Sadat Akhavi Academy',
+    metaDescription: 'Start designing your own circuits. Learn circuit theory and practical design.',
+    metaKeywords: 'circuit design, electronics design, circuit theory, starter kit, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5607.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_17',
+    mainImage: '/images/newArrival/04_elec/IMG_5607.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5607.JPG'],
+    description: [
+      "Start designing your own circuits from scratch.",
+      "Learn circuit theory, schematic reading, and practical design.",
+      "Move from following instructions to creating your own projects."
+    ],
+    homeSummary: "Start designing your own circuits. Learn circuit theory and practical design.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 18
+    productCode: 'SAA-ELC-018',
+    slug: 'electronics_kit_18',
+    title: 'Battery & Energy Storage Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Battery & Energy Storage Kit | Sadat Akhavi Academy',
+    metaDescription: 'Learn about batteries and energy storage. Build power systems for portable projects.',
+    metaKeywords: 'battery kit, energy storage, power systems, portable electronics, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5608.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_18',
+    mainImage: '/images/newArrival/04_elec/IMG_5608.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5608.JPG'],
+    description: [
+      "Master battery technology and energy storage systems.",
+      "Learn about different battery types and charging circuits.",
+      "Essential for building portable and autonomous devices."
+    ],
+    homeSummary: "Learn about batteries and energy storage. Build power systems for portable projects.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 19
+    productCode: 'SAA-ELC-019',
+    slug: 'electronics_kit_19',
+    title: 'Electronics Prototyping Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Electronics Prototyping Kit | Sadat Akhavi Academy',
+    metaDescription: 'Complete prototyping kit for rapid electronics development. Build and test ideas quickly.',
+    metaKeywords: 'prototyping kit, electronics prototyping, rapid development, breadboard, STEM learning',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5609.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_19',
+    mainImage: '/images/newArrival/04_elec/IMG_5609.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5609.JPG'],
+    description: [
+      "Complete prototyping kit for rapid electronics development.",
+      "Build and test your ideas quickly without soldering.",
+      "Perfect for experimentation and iterative design."
+    ],
+    homeSummary: "Complete prototyping kit for rapid electronics development. Build and test ideas quickly.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' }
+    ],
+    relatedKits: []
+  },
+  {
+    // Electronics Kit 20
+    productCode: 'SAA-ELC-020',
+    slug: 'electronics_kit_20',
+    title: 'Smart Sensors & Automation Kit',
+    status: 'active',
+    isAvailableSoon: true,
+    categories: ['electronics-kits'],
+    metaTitle: 'Smart Sensors & Automation Kit | Sadat Akhavi Academy',
+    metaDescription: 'Build smart automation systems with sensors. Learn home automation and intelligent control.',
+    metaKeywords: 'smart sensors, automation kit, home automation, intelligent control, STEM electronics',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/04_elec/IMG_5621.JPG',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/electronics_kit_20',
+    mainImage: '/images/newArrival/04_elec/IMG_5621.JPG',
+    gallery: ['/images/newArrival/04_elec/IMG_5621.JPG'],
+    description: [
+      "Build smart automation systems with intelligent sensors.",
+      "Learn home automation and intelligent environmental control.",
+      "Create responsive systems that react to their surroundings."
+    ],
+    homeSummary: "Build smart automation systems with sensors. Learn home automation and intelligent control.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/computer-8671934_1280.png', name: 'Electronics' },
+      { icon: '/images/hexagon-2307350_1280.png', name: 'Coding' }
     ],
     relatedKits: []
   }

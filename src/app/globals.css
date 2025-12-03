@@ -408,6 +408,140 @@ body, html {
   object-fit: contain;
 }
 
+/* Dual Image Styles for Packaged Kits */
+.product-card-image.dual-image {
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.dual-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.image-left,
+.image-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.4s ease-in-out;
+}
+
+.image-left {
+  left: 0;
+  width: 50%;
+}
+
+.image-right {
+  right: 0;
+  width: 50%;
+}
+
+.image-left img,
+.image-right img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Center divider bar */
+.dual-image-wrapper::after {
+  content: '◄ ►';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(240, 240, 240, 0.95) 100%);
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Divider line */
+.dual-image-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 100%);
+  transform: translateX(-50%);
+  z-index: 9;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover on Left Side - Expand Left Image */
+.product-card-image.dual-image .image-left:hover {
+  width: 100% !important;
+  z-index: 5;
+}
+
+.product-card-image.dual-image .image-left:hover ~ .image-right {
+  width: 0% !important;
+}
+
+/* Hover on Right Side - Expand Right Image */
+.product-card-image.dual-image .image-right:hover {
+  width: 100% !important;
+  z-index: 5;
+}
+
+.product-card-image.dual-image .image-right:hover ~ .image-left {
+  width: 0% !important;
+}
+
+/* Hide divider on hover */
+.product-card-image.dual-image:hover .dual-image-wrapper::after,
+.product-card-image.dual-image:hover .dual-image-wrapper::before {
+  opacity: 0;
+}
+
+/* Hover on Right Side - Expand Right Image */
+.product-card-image.dual-image .image-right:hover {
+  width: 75% !important;
+}
+
+.product-card-image.dual-image .image-right:hover ~ .image-left {
+  width: 25% !important;
+}
+
+/* Hover on Left Side - Expand Left Image */
+.product-card-image.dual-image .image-left:hover {
+  width: 75% !important;
+}
+
+.product-card-image.dual-image .image-left:hover ~ .image-right {
+  width: 25% !important;
+}
+
 .product-card-content {
   padding: 16px;
   flex-grow: 1;
@@ -534,10 +668,10 @@ body, html {
 }
 
 .carousel-product-item {
-  flex: 0 0 auto;
-  width: 320px;
-  min-width: 280px;
-  max-width: 320px;
+  flex: 0 0 320px;
+  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
 }
 
 .carousel-nav-button {
