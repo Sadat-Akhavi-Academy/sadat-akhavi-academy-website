@@ -356,6 +356,37 @@ export const products: ProductData[] = [
     ]
   },
   {
+    // Mechanical Kit 11
+    productCode: 'SAA-MCH-011',
+    slug: 'mechanical_kit_11',
+    title: 'IronGrip Arm',
+    status: 'active',
+    
+    // Product Flags/Badges
+    isAvailableSoon: true,
+    
+    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
+    metaTitle: 'Mechanical Kit 11 - 3D Printed Structural Kit | Sadat Akhavi Academy',
+    metaDescription: 'Build with our Mechanical Kit 11 - precision 3D printed parts for structural and mechanical projects.',
+    metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
+    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5573_mod11.jpg',
+    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_11',
+    mainImage: '/images/newArrival/02/IMG_5573_mod11.jpg',
+    gallery: ['/images/newArrival/02/IMG_5573_mod11.jpg'],
+    description: [
+      "High-quality 3D printed mechanical components for your next project.",
+      "Learn mechanical design, assembly, and structural engineering principles.",
+      "Perfect for building custom mechanisms and structural prototypes."
+    ],
+    homeSummary: "High-quality 3D printed mechanical components for your next project. Perfect for learning mechanical design and structural engineering.",
+    introVideoId: 'qB5FXVPfYr4',
+    skills: [
+      { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
+      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' }
+    ],
+    relatedKits: []
+  },
+  {
     // Mechanical Kit 1
     productCode: 'SAA-MCH-001',
     slug: 'mechanical_kit_1',
@@ -655,37 +686,6 @@ export const products: ProductData[] = [
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_10',
     mainImage: '/images/newArrival/02/IMG_5565_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5565_mod11.jpg'],
-    description: [
-      "High-quality 3D printed mechanical components for your next project.",
-      "Learn mechanical design, assembly, and structural engineering principles.",
-      "Perfect for building custom mechanisms and structural prototypes."
-    ],
-    homeSummary: "High-quality 3D printed mechanical components for your next project. Perfect for learning mechanical design and structural engineering.",
-    introVideoId: 'qB5FXVPfYr4',
-    skills: [
-      { icon: '/images/3d-printer-3308168_1280.png', name: '3D Design' },
-      { icon: '/images/flat-2126877_1280.png', name: 'Robotics' }
-    ],
-    relatedKits: []
-  },
-  {
-    // Mechanical Kit 11
-    productCode: 'SAA-MCH-011',
-    slug: 'mechanical_kit_11',
-    title: 'IronGrip Arm',
-    status: 'active',
-    
-    // Product Flags/Badges
-    isAvailableSoon: true,
-    
-    categories: [ 'mechanical-structural-kits',  'electronics-kits'],
-    metaTitle: 'Mechanical Kit 11 - 3D Printed Structural Kit | Sadat Akhavi Academy',
-    metaDescription: 'Build with our Mechanical Kit 11 - precision 3D printed parts for structural and mechanical projects.',
-    metaKeywords: 'mechanical kit, 3D printed parts, structural kit, STEM education, mechanical components',
-    ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5573_mod11.jpg',
-    ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_11',
-    mainImage: '/images/newArrival/02/IMG_5573_mod11.jpg',
-    gallery: ['/images/newArrival/02/IMG_5573_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
