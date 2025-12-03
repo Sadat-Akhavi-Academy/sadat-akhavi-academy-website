@@ -28,6 +28,7 @@ export interface ProductData {
   isAvailableSoon?: boolean       // Badge: Available Soon / Coming Soon
   isClass?: boolean               // Badge: Workshop/Class offering
   isScholarship?: boolean         // Badge: Scholarship available
+  useDualImageCard?: boolean      // Display: Use dual split images on homepage card
   
   // Homepage Display Categories
   categories: Array<
@@ -97,7 +98,8 @@ export const products: ProductData[] = [
     
     // Product Flags/Badges
     // isSpecial: true,
-    isSoldOut: true,  
+    isSoldOut: true,
+    useDualImageCard: true,
     
     categories: ['packaged-kits'],
     metaTitle: 'Alpha Bike X+ - Advanced RC Bike Kit | Sadat Akhavi Academy',
@@ -139,7 +141,7 @@ export const products: ProductData[] = [
     slug: 'turbo_thumb_plus',
     title: 'Turbo Thumb+',
     status: 'active',
-    isSoldOut: true, 
+    isSoldOut: true,
     categories: ['packaged-kits'],
     metaTitle: 'Turbo Thumb+ - Universal RC Controller Kit | Sadat Akhavi Academy',
     metaDescription: 'Build your own Turbo Thumb+ - a modular universal controller for all your RC devices. Learn electronics, ESP32 programming, and wireless communication.',
@@ -363,7 +365,8 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isNewArrival: true,
     isHot: true,
-    isAvailableSoon: true,
+    // isAvailableSoon: true,
+    useDualImageCard: true,
     
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 1 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -372,6 +375,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5499_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_1',
     mainImage: '/images/newArrival/02/IMG_5499_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5506_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5499_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -395,6 +399,7 @@ export const products: ProductData[] = [
     
     // Product Flags/Badges
     isAvailableSoon: true,
+    useDualImageCard: true,
     
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 2 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -403,6 +408,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5506_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_2',
     mainImage: '/images/newArrival/02/IMG_5506_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5506_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -423,7 +429,8 @@ export const products: ProductData[] = [
     slug: 'mechanical_kit_3',
     title: 'Farm Force 2000',
     status: 'active',
-    
+        useDualImageCard: true,
+
     // Product Flags/Badges
     // isOnSale: true,
     // isLowStock: true,
@@ -436,6 +443,8 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5513_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_3',
     mainImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
+      secondaryImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
+
     gallery: ['/images/newArrival/02/IMG_5513_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -457,6 +466,7 @@ export const products: ProductData[] = [
     title: 'Dream Beam',
     status: 'active',
     isAvailableSoon: true,
+    useDualImageCard: true,
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 4 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 4 - precision 3D printed parts for structural and mechanical projects.',
@@ -464,6 +474,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5523_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_4',
     mainImage: '/images/newArrival/02/IMG_5523_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5525_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5523_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -516,6 +527,7 @@ export const products: ProductData[] = [
     title: 'FarmForce 3000',
     status: 'active',
     isAvailableSoon: true,
+    useDualImageCard: true,
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 6 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 6 - precision 3D printed parts for structural and mechanical projects.',
@@ -523,6 +535,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5542_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_6',
     mainImage: '/images/newArrival/02/IMG_5542_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5553_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5542_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -544,6 +557,7 @@ export const products: ProductData[] = [
     title: 'Ding Works (Fortress Sentinel Security)',
     status: 'active',
     isAvailableSoon: true,
+    useDualImageCard: true,
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 7 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 7 - precision 3D printed parts for structural and mechanical projects.',
@@ -551,6 +565,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5553_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_7',
     mainImage: '/images/newArrival/02/IMG_5553_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5559_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5553_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -572,6 +587,7 @@ export const products: ProductData[] = [
     title: 'Ding Works Pro (Fortress Sentinel Security)',
     status: 'active',
     isAvailableSoon: true,
+    useDualImageCard: true,
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 8 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 8 - precision 3D printed parts for structural and mechanical projects.',
@@ -579,6 +595,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5559_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_8',
     mainImage: '/images/newArrival/02/IMG_5559_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5563_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5559_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -600,6 +617,7 @@ export const products: ProductData[] = [
     title: 'Home Security System - Fortress Sentinel Security',
     status: 'active',
     isAvailableSoon: true,
+    useDualImageCard: true,
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 9 - 3D Printed Structural Kit | Sadat Akhavi Academy',
     metaDescription: 'Build with our Mechanical Kit 9 - precision 3D printed parts for structural and mechanical projects.',
@@ -607,6 +625,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5563_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_9',
     mainImage: '/images/newArrival/02/IMG_5563_mod11.jpg',
+    secondaryImage: '/images/newArrival/02/IMG_5565_mod11.jpg',
     gallery: ['/images/newArrival/02/IMG_5563_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",

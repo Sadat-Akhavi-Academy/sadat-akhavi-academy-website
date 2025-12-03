@@ -1,7 +1,9 @@
 'use client'
 
 import ClientScripts from '@/components/ClientScripts'
-import CategorySection from '@/components/CategorySection'
+import CategorySection from '@/components/CategorySection';
+import SingleImageCard from '@/components/SingleImageCard';
+import DualImageCard from '@/components/DualImageCard';
 import { getProductsGroupedByCategories, getCategoryDisplayName, getAvailableSoonProducts, type ProductCategory } from '@/data/products'
 import Link from 'next/link'
 
@@ -267,15 +269,18 @@ export default function HomeContent() {
                   }}
                 >
                   {/* Double products for seamless infinite loop */}
-                  {[...availableSoonProducts, ...availableSoonProducts].map((product, idx) => (
-                    <div 
-                      key={`${product.productCode}-${idx}`} 
-                      style={{ 
-                        minWidth: '280px', 
-                        flexShrink: 0 
-                      }}
-                    >
+                  {[...availableSoonProducts, ...availableSoonProducts].map((product, idx) => {
+                    const hasDualImages = product.useDualImageCard && product.secondaryImage;
+                    
+                    return (
                       <div 
+                        key={`${product.productCode}-${idx}`} 
+                        style={{ 
+                          minWidth: '280px',
+                          maxWidth: '280px',
+                          width: '280px',
+                          flexShrink: 0 
+                        }}
                         onClick={() => {
                           const modal = document.getElementById('available-soon-modal')
                           const modalTitle = document.getElementById('modal-product-title')
@@ -290,14 +295,39 @@ export default function HomeContent() {
                             modal.style.display = 'block'
                           }
                         }}
-                        style={{ textDecoration: 'none', cursor: 'pointer' }}
                       >
                         <div className="w3-card w3-white w3-hover-shadow" style={{ height: '100%', border: '1px solid #ddd', borderRadius: '4px' }}>
-                          <img 
-                            src={product.mainImage} 
-                            alt={product.title} 
-                            style={{ width: '100%', height: '200px', objectFit: 'cover', borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }} 
-                          />
+                          {hasDualImages ? (
+                            <div className="dual-image-container-available-soon" style={{ 
+                              position: 'relative',
+                              width: '100%',
+                              height: '200px',
+                              overflow: 'hidden',
+                              borderTopLeftRadius: '4px', 
+                              borderTopRightRadius: '4px'
+                            }}>
+                              <div className="dual-image-wrapper">
+                                <div className="image-left">
+                                  <img 
+                                    src={product.mainImage} 
+                                    alt={`${product.title} - Left`}
+                                  />
+                                </div>
+                                <div className="image-right">
+                                  <img 
+                                    src={product.secondaryImage} 
+                                    alt={`${product.title} - Right`}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            <img 
+                              src={product.mainImage} 
+                              alt={product.title} 
+                              style={{ width: '100%', height: '200px', objectFit: 'cover', borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }} 
+                            />
+                          )}
                           <div style={{ padding: '16px' }}>
                             <h5 style={{ margin: '0 0 8px 0', fontWeight: 'bold', color: '#000' }}>{product.title}</h5>
                             <p className="w3-text-grey" style={{ margin: '0 0 4px 0', fontSize: '14px' }}>
@@ -315,8 +345,8 @@ export default function HomeContent() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
                 <style jsx>{`
                   .available-soon-scroll {

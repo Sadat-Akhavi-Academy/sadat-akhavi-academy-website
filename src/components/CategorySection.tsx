@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
-import Link from 'next/link';
 import ProductBadge from './ProductBadge';
+import SingleImageCard from './SingleImageCard';
+import DualImageCard from './DualImageCard';
 import { ProductData } from '@/data/products';
 
 interface CategorySectionProps {
@@ -81,48 +82,12 @@ const CategorySection: React.FC<CategorySectionProps> = ({ categoryName, product
         
         <div className={`products-carousel ${isExpanded ? 'expanded' : ''}`} ref={carouselRef}>
           {products.map((product) => {
-            const isPackagedKit = product.categories.includes('packaged-kits');
-            const hasDualImages = isPackagedKit && product.secondaryImage;
+            const hasDualImages = product.useDualImageCard && product.secondaryImage;
             
-            return (
-              <div key={product.productCode} className="carousel-product-item">
-                <div className="product-card">
-                  <Link href={`/products/${product.slug}`} className="product-card-link">
-                    <div className={`product-card-image ${hasDualImages ? 'dual-image' : ''}`}>
-                      <ProductBadge product={product} />
-                      {hasDualImages ? (
-                        <>
-                          <div className="dual-image-wrapper">
-                            <div className="image-left">
-                              <img 
-                                src={product.mainImage} 
-                                alt={`${product.title} - Left`}
-                              />
-                            </div>
-                            <div className="image-right">
-                              <img 
-                                src={product.secondaryImage} 
-                                alt={`${product.title} - Right`}
-                              />
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <img 
-                          src={product.mainImage} 
-                          alt={product.title}
-                        />
-                      )}
-                    </div>
-                    <div className="product-card-content">
-                      <h3 className="product-card-title">{product.title}</h3>
-                      <p className="product-card-description">
-                        {product.homeSummary}
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+            return hasDualImages ? (
+              <DualImageCard key={product.productCode} product={product} />
+            ) : (
+              <SingleImageCard key={product.productCode} product={product} />
             );
           })}
         </div>

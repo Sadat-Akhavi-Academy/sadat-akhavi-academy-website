@@ -524,6 +524,72 @@ body, html {
   opacity: 0;
 }
 
+/* Available Soon Section Dual Image Cards */
+.dual-image-container-available-soon .dual-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.dual-image-container-available-soon .image-left,
+.dual-image-container-available-soon .image-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.4s ease-in-out;
+}
+
+.dual-image-container-available-soon .image-left {
+  left: 0;
+  width: 50%;
+}
+
+.dual-image-container-available-soon .image-right {
+  right: 0;
+  width: 50%;
+}
+
+.dual-image-container-available-soon .image-left img,
+.dual-image-container-available-soon .image-right img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover on Left Side - Expand Left Image */
+.dual-image-container-available-soon .image-left:hover {
+  width: 100% !important;
+  z-index: 5;
+}
+
+.dual-image-container-available-soon .image-left:hover ~ .image-right {
+  width: 0% !important;
+}
+
+/* Hover on Right Side - Expand Right Image */
+.dual-image-container-available-soon .image-right:hover {
+  width: 100% !important;
+  z-index: 5;
+}
+
+.dual-image-container-available-soon .image-right:hover ~ .image-left {
+  width: 0% !important;
+}
+
+/* Hide divider on hover for Available Soon */
+.dual-image-container-available-soon:hover .dual-image-wrapper::after,
+.dual-image-container-available-soon:hover .dual-image-wrapper::before {
+  opacity: 0;
+}
+
 /* Hover on Right Side - Expand Right Image */
 .product-card-image.dual-image .image-right:hover {
   width: 75% !important;
