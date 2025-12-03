@@ -321,7 +321,7 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    z-index: 5;
+    z-index: 100;
     max-width: calc(100% - 20px);
 }
 
@@ -336,6 +336,8 @@ body, html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
     transition: transform 0.2s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .product-badge:hover {
@@ -400,6 +402,8 @@ body, html {
   height: 200px;
   overflow: hidden;
   background-color: #f5f5f5;
+  z-index: 1;
+  transform: translateZ(0);
 }
 
 .product-card-image img {
@@ -420,6 +424,7 @@ body, html {
   width: 100%;
   height: 100%;
   display: flex;
+  z-index: 1;
 }
 
 .image-left,
@@ -456,7 +461,7 @@ body, html {
 
 /* Center divider bar */
 .dual-image-wrapper::after {
-  content: '◄ ►';
+  content: '+';
   position: absolute;
   left: 50%;
   top: 50%;
@@ -467,17 +472,17 @@ body, html {
     rgba(255, 255, 255, 0.95) 0%,
     rgba(240, 240, 240, 0.95) 100%);
   border-radius: 50%;
-  z-index: 10;
+  z-index: 5;
   pointer-events: none;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 28px;
   color: #333;
   font-weight: bold;
+  line-height: 1;
 }
 
 /* Divider line */
@@ -493,7 +498,7 @@ body, html {
     rgba(255, 255, 255, 0.6) 50%,
     rgba(255, 255, 255, 0.2) 100%);
   transform: translateX(-50%);
-  z-index: 9;
+  z-index: 4;
   pointer-events: none;
   transition: all 0.4s ease-in-out;
 }
@@ -831,5 +836,134 @@ body, html {
   
   .expand-toggle-button span {
     display: none;
+  }
+}
+
+/* Available Soon Section - Desktop Scrollbar Hide */
+#available-soon-container::-webkit-scrollbar {
+  display: none;
+}
+
+#available-soon-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Available Soon Section - Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide arrow buttons on mobile for cleaner look */
+  .available-soon-arrow {
+    display: none !important;
+  }
+  
+  /* Remove all padding/margin on mobile for full-width scroll */
+  .available-soon-wrapper {
+    padding: 0 !important;
+    margin-top: 20px !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+  }
+  
+  /* Adjust container */
+  #available-soon-container {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 16px !important;
+  }
+  
+  #available-soon-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Make cards slightly smaller on mobile */
+  .available-soon-card {
+    min-width: 260px !important;
+    max-width: 260px !important;
+    width: 260px !important;
+  }
+  
+  /* Reduce gap between cards on mobile */
+  .available-soon-scroll {
+    gap: 12px !important;
+    padding: 0 !important;
+  }
+  
+  /* Enhanced card styling for mobile */
+  .available-soon-card .w3-card {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15) !important;
+    border: 1px solid #e8e8e8 !important;
+  }
+  
+  .available-soon-card .w3-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+  }
+  
+  /* Better text sizing on mobile */
+  .available-soon-card h5 {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .available-soon-card p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Adjust padding inside cards */
+  .available-soon-card > div > div:last-child {
+    padding: 14px !important;
+  }
+  
+  /* Adjust image height on mobile */
+  .available-soon-card img,
+  .available-soon-card .dual-image-container-available-soon {
+    height: 180px !important;
+  }
+  
+  /* Add visual indicator for scrolling on mobile */
+  .available-soon-wrapper::after {
+    content: '← Swipe →';
+    display: block;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 12px;
+    font-style: italic;
+  }
+}
+
+/* Improve hover effects for desktop/tablet */
+@media (min-width: 769px) {
+  .available-soon-wrapper {
+    padding: 0 60px !important;
+  }
+  
+  .available-soon-card .w3-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .available-soon-card:hover .w3-card {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2) !important;
+  }
+  
+  /* Improve arrow button styling on larger screens */
+  .available-soon-arrow {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .available-soon-arrow:hover {
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1.15) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  
+  .available-soon-arrow:active {
+    transform: translateY(-50%) scale(1.05) !important;
   }
 }

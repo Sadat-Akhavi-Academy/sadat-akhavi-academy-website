@@ -182,24 +182,25 @@ export default function HomeContent() {
             <i className="fa fa-rocket w3-margin-right"></i>Available Soon
           </h3>
           {availableSoonProducts.length > 0 ? (
-            <div style={{ position: 'relative', padding: '0 60px', marginTop: '24px' }}>
+            <div style={{ position: 'relative', padding: '0 60px', marginTop: '24px' }} className="available-soon-wrapper">
               {/* Left Arrow */}
               <button
                 onClick={() => {
                   const container = document.getElementById('available-soon-container')
                   if (container) {
-                    container.scrollBy({ left: -300, behavior: 'smooth' })
+                    container.scrollBy({ left: -320, behavior: 'smooth' })
                     // Pause auto-scroll temporarily
-                    const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
-                    if (scrollDiv) {
-                      scrollDiv.style.animationPlayState = 'paused'
+                    if ((window as any).autoScrollInterval) {
+                      clearInterval((window as any).autoScrollInterval)
                       setTimeout(() => {
-                        scrollDiv.style.animationPlayState = 'running'
-                      }, 2000)
+                        if (container) {
+                          (window as any).startAutoScroll(container)
+                        }
+                      }, 3000)
                     }
                   }
                 }}
-                className="w3-button w3-black w3-hover-grey"
+                className="w3-button w3-black w3-hover-grey available-soon-arrow available-soon-arrow-left"
                 style={{
                   position: 'absolute',
                   left: '0',
@@ -208,7 +209,8 @@ export default function HomeContent() {
                   zIndex: 5,
                   padding: '12px 16px',
                   fontSize: '20px',
-                  opacity: 0.8
+                  opacity: 0.8,
+                  borderRadius: '50%'
                 }}
               >
                 &#10094;
@@ -219,18 +221,19 @@ export default function HomeContent() {
                 onClick={() => {
                   const container = document.getElementById('available-soon-container')
                   if (container) {
-                    container.scrollBy({ left: 300, behavior: 'smooth' })
+                    container.scrollBy({ left: 320, behavior: 'smooth' })
                     // Pause auto-scroll temporarily
-                    const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
-                    if (scrollDiv) {
-                      scrollDiv.style.animationPlayState = 'paused'
+                    if ((window as any).autoScrollInterval) {
+                      clearInterval((window as any).autoScrollInterval)
                       setTimeout(() => {
-                        scrollDiv.style.animationPlayState = 'running'
-                      }, 2000)
+                        if (container) {
+                          (window as any).startAutoScroll(container)
+                        }
+                      }, 3000)
                     }
                   }
                 }}
-                className="w3-button w3-black w3-hover-grey"
+                className="w3-button w3-black w3-hover-grey available-soon-arrow available-soon-arrow-right"
                 style={{
                   position: 'absolute',
                   right: '0',
@@ -239,7 +242,8 @@ export default function HomeContent() {
                   zIndex: 5,
                   padding: '12px 16px',
                   fontSize: '20px',
-                  opacity: 0.8
+                  opacity: 0.8,
+                  borderRadius: '50%'
                 }}
               >
                 &#10095;
@@ -248,24 +252,19 @@ export default function HomeContent() {
               <div 
                 id="available-soon-container"
                 style={{ 
-                  position: 'relative', 
-                  overflow: 'hidden',
-                  scrollBehavior: 'smooth'
-                }}
-                onMouseEnter={() => {
-                  const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
-                  if (scrollDiv) scrollDiv.style.animationPlayState = 'paused'
-                }}
-                onMouseLeave={() => {
-                  const scrollDiv = document.querySelector('.available-soon-scroll') as HTMLElement
-                  if (scrollDiv) scrollDiv.style.animationPlayState = 'running'
+                  overflowX: 'auto',
+                  overflowY: 'hidden',
+                  scrollBehavior: 'smooth',
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none'
                 }}
               >
                 <div 
                   className="available-soon-scroll"
                   style={{ 
                     display: 'flex', 
-                    gap: '16px'
+                    gap: '16px',
+                    width: 'max-content'
                   }}
                 >
                   {/* Double products for seamless infinite loop */}
@@ -275,11 +274,13 @@ export default function HomeContent() {
                     return (
                       <div 
                         key={`${product.productCode}-${idx}`} 
+                        className="available-soon-card"
                         style={{ 
                           minWidth: '280px',
                           maxWidth: '280px',
                           width: '280px',
-                          flexShrink: 0 
+                          flexShrink: 0,
+                          cursor: 'pointer'
                         }}
                         onClick={() => {
                           const modal = document.getElementById('available-soon-modal')
@@ -296,15 +297,21 @@ export default function HomeContent() {
                           }
                         }}
                       >
-                        <div className="w3-card w3-white w3-hover-shadow" style={{ height: '100%', border: '1px solid #ddd', borderRadius: '4px' }}>
+                        <div className="w3-card w3-white w3-hover-shadow" style={{ 
+                          height: '100%', 
+                          border: '1px solid #e0e0e0', 
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          transition: 'all 0.3s ease'
+                        }}>
                           {hasDualImages ? (
                             <div className="dual-image-container-available-soon" style={{ 
                               position: 'relative',
                               width: '100%',
                               height: '200px',
                               overflow: 'hidden',
-                              borderTopLeftRadius: '4px', 
-                              borderTopRightRadius: '4px'
+                              borderTopLeftRadius: '8px', 
+                              borderTopRightRadius: '8px'
                             }}>
                               <div className="dual-image-wrapper">
                                 <div className="image-left">
@@ -325,22 +332,52 @@ export default function HomeContent() {
                             <img 
                               src={product.mainImage} 
                               alt={product.title} 
-                              style={{ width: '100%', height: '200px', objectFit: 'cover', borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }} 
+                              style={{ 
+                                width: '100%', 
+                                height: '200px', 
+                                objectFit: 'cover', 
+                                borderTopLeftRadius: '8px', 
+                                borderTopRightRadius: '8px' 
+                              }} 
                             />
                           )}
                           <div style={{ padding: '16px' }}>
-                            <h5 style={{ margin: '0 0 8px 0', fontWeight: 'bold', color: '#000' }}>{product.title}</h5>
-                            <p className="w3-text-grey" style={{ margin: '0 0 4px 0', fontSize: '14px' }}>
-                              <i className="fa fa-clock-o w3-margin-right"></i>Available Soon
+                            <h5 style={{ 
+                              margin: '0 0 12px 0', 
+                              fontWeight: 'bold', 
+                              color: '#000',
+                              fontSize: '16px',
+                              lineHeight: '1.4'
+                            }}>
+                              {product.title}
+                            </h5>
+                            <p className="w3-text-grey" style={{ 
+                              margin: '0 0 8px 0', 
+                              fontSize: '14px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px'
+                            }}>
+                              <i className="fa fa-clock-o" style={{ color: '#ff9800' }}></i>
+                              <span style={{ color: '#ff9800', fontWeight: '600' }}>Available Soon</span>
                             </p>
-                            <p className="w3-text-grey" style={{ margin: 0, fontSize: '12px', fontStyle: 'italic' }}>
-                              <i className="fa fa-tag w3-margin-right"></i>
-                              {product.categories.map((cat, index) => (
-                                <span key={cat}>
-                                  {getCategoryDisplayName(cat as ProductCategory)}
-                                  {index < product.categories.length - 1 ? ', ' : ''}
-                                </span>
-                              ))}
+                            <p className="w3-text-grey" style={{ 
+                              margin: 0, 
+                              fontSize: '12px', 
+                              fontStyle: 'italic',
+                              display: 'flex',
+                              alignItems: 'flex-start',
+                              gap: '6px'
+                            }}>
+                              <i className="fa fa-tag" style={{ marginTop: '2px' }}></i>
+                              <span>
+                                {product.categories.map((cat, index) => (
+                                  <span key={cat}>
+                                    {getCategoryDisplayName(cat as ProductCategory)}
+                                    {index < product.categories.length - 1 ? ', ' : ''}
+                                  </span>
+                                ))}
+                              </span>
                             </p>
                           </div>
                         </div>
@@ -349,20 +386,69 @@ export default function HomeContent() {
                   })}
                 </div>
                 <style jsx>{`
-                  .available-soon-scroll {
-                    animation: scroll-continuous ${availableSoonProducts.length * 5}s linear infinite;
-                  }
-                  
-                  @keyframes scroll-continuous {
-                    0% {
-                      transform: translateX(0);
-                    }
-                    100% {
-                      transform: translateX(calc(-296px * ${availableSoonProducts.length}));
-                    }
+                  #available-soon-container::-webkit-scrollbar {
+                    display: none;
                   }
                 `}</style>
               </div>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (function() {
+                      let autoScrollPaused = false;
+                      
+                      window.startAutoScroll = function(container) {
+                        if (window.autoScrollInterval) {
+                          clearInterval(window.autoScrollInterval);
+                        }
+                        
+                        window.autoScrollInterval = setInterval(function() {
+                          if (!autoScrollPaused && container) {
+                            // Calculate halfway point (where first set ends and duplicate begins)
+                            const halfScroll = (container.scrollWidth - container.clientWidth) / 2;
+                            
+                            if (container.scrollLeft >= halfScroll) {
+                              // Reset to beginning for seamless loop
+                              container.scrollLeft = 0;
+                            } else {
+                              container.scrollLeft += 1;
+                            }
+                          }
+                        }, 20);
+                      };
+                      
+                      setTimeout(function() {
+                        const container = document.getElementById('available-soon-container');
+                        if (container) {
+                          window.startAutoScroll(container);
+                          
+                          container.addEventListener('mouseenter', function() {
+                            autoScrollPaused = true;
+                          });
+                          
+                          container.addEventListener('mouseleave', function() {
+                            autoScrollPaused = false;
+                          });
+                          
+                          container.addEventListener('touchstart', function() {
+                            autoScrollPaused = true;
+                            if (window.autoScrollInterval) {
+                              clearInterval(window.autoScrollInterval);
+                            }
+                          });
+                          
+                          container.addEventListener('touchend', function() {
+                            setTimeout(function() {
+                              autoScrollPaused = false;
+                              window.startAutoScroll(container);
+                            }, 2000);
+                          });
+                        }
+                      }, 100);
+                    })();
+                  `
+                }}
+              />
             </div>
           ) : (
             <div className="w3-row-padding" style={{ marginTop: '24px' }}>

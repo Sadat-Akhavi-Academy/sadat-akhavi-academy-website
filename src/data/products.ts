@@ -99,7 +99,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     // isSpecial: true,
     isSoldOut: true,
-    useDualImageCard: true,
+    // useDualImageCard: true,
     
     categories: ['packaged-kits'],
     metaTitle: 'Alpha Bike X+ - Advanced RC Bike Kit | Sadat Akhavi Academy',
@@ -365,7 +365,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     isNewArrival: true,
     isHot: true,
-    // isAvailableSoon: true,
+    isAvailableSoon: true,
     useDualImageCard: true,
     
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
@@ -375,7 +375,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5499_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_1',
     mainImage: '/images/newArrival/02/IMG_5499_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5506_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5499_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -408,7 +408,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5506_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_2',
     mainImage: '/images/newArrival/02/IMG_5506_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5506_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -434,7 +434,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     // isOnSale: true,
     // isLowStock: true,
-    // isAvailableSoon: true,
+    isAvailableSoon: true,
 
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 3 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -443,7 +443,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5513_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_3',
     mainImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
-      secondaryImage: '/images/newArrival/02/IMG_5513_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5621.JPG',
 
     gallery: ['/images/newArrival/02/IMG_5513_mod11.jpg'],
     description: [
@@ -474,7 +474,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5523_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_4',
     mainImage: '/images/newArrival/02/IMG_5523_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5525_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5523_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -497,7 +497,7 @@ export const products: ProductData[] = [
     status: 'active',
     
     // Product Flags/Badges
-    // isAvailableSoon: true,
+    isAvailableSoon: true,
     
     categories: [ 'mechanical-structural-kits',  'electronics-kits'],
     metaTitle: 'Mechanical Kit 5 - 3D Printed Structural Kit | Sadat Akhavi Academy',
@@ -535,8 +535,8 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5542_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_6',
     mainImage: '/images/newArrival/02/IMG_5542_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5553_mod11.jpg',
-    gallery: ['/images/newArrival/02/IMG_5542_mod11.jpg'],
+    secondaryImage: '/images/newArrival/04_elec/IMG_5609.JPG',
+    gallery: ['/images/newArrival/02/IMG_5542_mod11.jpg'], 
     description: [
       "High-quality 3D printed mechanical components for your next project.",
       "Learn mechanical design, assembly, and structural engineering principles.",
@@ -565,7 +565,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5553_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_7',
     mainImage: '/images/newArrival/02/IMG_5553_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5559_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5553_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -595,7 +595,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5559_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_8',
     mainImage: '/images/newArrival/02/IMG_5559_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5563_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5559_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -625,7 +625,7 @@ export const products: ProductData[] = [
     ogImage: 'https://sadat-akhavi-academy.com/images/newArrival/02/IMG_5563_mod11.jpg',
     ogUrl: 'https://sadat-akhavi-academy.com/products/mechanical_kit_9',
     mainImage: '/images/newArrival/02/IMG_5563_mod11.jpg',
-    secondaryImage: '/images/newArrival/02/IMG_5565_mod11.jpg',
+    secondaryImage: '/images/newArrival/04_elec/IMG_5597.JPG',
     gallery: ['/images/newArrival/02/IMG_5563_mod11.jpg'],
     description: [
       "High-quality 3D printed mechanical components for your next project.",
@@ -710,7 +710,7 @@ export const products: ProductData[] = [
     // Product Flags/Badges
     // isNewArrival: true,
     // isHot: true,
-    // isAvailableSoon: true,
+    isAvailableSoon: true,
     
     categories: ['mechanical-structural-kits'],
     metaTitle: 'Aero Dreamer - Advanced Flight Mechanics Kit | Sadat Akhavi Academy',
